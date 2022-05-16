@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="tree_funks.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2135" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="6" />
+			<Collapse line="14" />
+			<Collapse line="64" />
+			<Collapse line="69" />
+			<Collapse line="83" />
+			<Collapse line="93" />
+			<Collapse line="98" />
+			<Collapse line="103" />
+		</Folding>
+	</File>
+	<File name="dif_reader.cpp" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="-4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="115" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="37" />
+			<Collapse line="41" />
+			<Collapse line="43" />
+			<Collapse line="67" />
+			<Collapse line="74" />
+			<Collapse line="79" />
+			<Collapse line="87" />
+			<Collapse line="91" />
+		</Folding>
+	</File>
+	<File name="tex_dump.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="388" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="4" />
+			<Collapse line="17" />
+			<Collapse line="25" />
+			<Collapse line="27" />
+			<Collapse line="29" />
+			<Collapse line="34" />
+			<Collapse line="39" />
+			<Collapse line="43" />
+			<Collapse line="47" />
+			<Collapse line="52" />
+			<Collapse line="57" />
+		</Folding>
+	</File>
+	<File name="console_dump.cpp" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="45" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="4" />
+			<Collapse line="8" />
+		</Folding>
+	</File>
+	<File name="tree_funks.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="173" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="0" />
+			<Collapse line="8" />
+			<Collapse line="13" />
+			<Collapse line="19" />
+		</Folding>
+	</File>
+	<File name="differ.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1467" topLine="40" />
+		</Cursor>
+	</File>
+	<File name="dot_dump.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1454" topLine="3" />
+		</Cursor>
+		<Folding>
+			<Collapse line="6" />
+			<Collapse line="54" />
+			<Collapse line="56" />
+		</Folding>
+	</File>
+	<File name="diff_dsl.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2462" topLine="48" />
+		</Cursor>
+		<Folding>
+			<Collapse line="17" />
+			<Collapse line="28" />
+			<Collapse line="38" />
+			<Collapse line="44" />
+			<Collapse line="50" />
+			<Collapse line="56" />
+			<Collapse line="62" />
+			<Collapse line="68" />
+			<Collapse line="74" />
+			<Collapse line="83" />
+			<Collapse line="85" />
+			<Collapse line="89" />
+			<Collapse line="100" />
+			<Collapse line="126" />
+			<Collapse line="130" />
+			<Collapse line="134" />
+			<Collapse line="138" />
+		</Folding>
+	</File>
+	<File name="diff_dsl.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="129" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="0" />
+		</Folding>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="985" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="9" />
+			<Collapse line="18" />
+			<Collapse line="32" />
+			<Collapse line="40" />
+		</Folding>
+	</File>
+	<File name="optimizer.cpp" open="1" top="1" tabpos="8" split="0" active="1" splitpos="0" zoom_1="-2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5369" topLine="23" />
+		</Cursor>
+		<Folding>
+			<Collapse line="11" />
+			<Collapse line="18" />
+			<Collapse line="20" />
+			<Collapse line="22" />
+			<Collapse line="27" />
+			<Collapse line="36" />
+			<Collapse line="57" />
+			<Collapse line="61" />
+			<Collapse line="65" />
+			<Collapse line="69" />
+			<Collapse line="77" />
+			<Collapse line="81" />
+			<Collapse line="85" />
+			<Collapse line="110" />
+			<Collapse line="114" />
+			<Collapse line="118" />
+		</Folding>
+	</File>
+	<File name="safe_gets.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="580" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="6" />
+			<Collapse line="12" />
+			<Collapse line="21" />
+			<Collapse line="25" />
+			<Collapse line="27" />
+		</Folding>
+	</File>
+	<File name="differ.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="-3" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="894" topLine="15" />
+		</Cursor>
+		<Folding>
+			<Collapse line="10" />
+			<Collapse line="20" />
+			<Collapse line="50" />
+			<Collapse line="55" />
+			<Collapse line="68" />
+			<Collapse line="132" />
+		</Folding>
+	</File>
+</CodeBlocks_layout_file>

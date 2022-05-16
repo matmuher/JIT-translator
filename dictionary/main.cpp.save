@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include "dict.h"
+
+int main ()
+    {
+    char* words1 
+    char* words2
+
+    return 0;
+    }

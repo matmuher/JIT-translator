@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="..\..\..\memory_free\elephant_calloc.cpp" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="338" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="-3" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="385" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\..\..\memory_free\elephant_calloc_extern.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="116" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="42" />
+		</Folding>
+	</File>
+	<File name="..\hamlet_dynamic_proc\d_hamlet_functions.cpp" open="1" top="1" tabpos="6" split="0" active="1" splitpos="0" zoom_1="-4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="89" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="89" />
+			<Collapse line="106" />
+			<Collapse line="108" />
+			<Collapse line="123" />
+			<Collapse line="127" />
+			<Collapse line="136" />
+			<Collapse line="140" />
+			<Collapse line="142" />
+			<Collapse line="287" />
+			<Collapse line="294" />
+			<Collapse line="297" />
+			<Collapse line="300" />
+		</Folding>
+	</File>
+	<File name="..\hamlet_dynamic_proc\string_functions.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="-5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="..\hamlet_dynamic_proc\d_hamlet_functions.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="204" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="26" />
+			<Collapse line="34" />
+			<Collapse line="43" />
+			<Collapse line="53" />
+			<Collapse line="59" />
+			<Collapse line="68" />
+		</Folding>
+	</File>
+	<File name="..\hamlet_dynamic_proc\string_funk.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="162" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="18" />
+			<Collapse line="86" />
+			<Collapse line="99" />
+		</Folding>
+	</File>
+</CodeBlocks_layout_file>

@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>one_buffer_d_hamlet build log</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+<body>
+<tt>
+Build started on: <u>07-10-2021 at 08:28.45</u><br />
+Build ended on: <u>07-10-2021 at 08:28.47</u><p />
+<b>-------------- Build: Debug in one_buffer_d_hamlet (compiler: Use it for projects       = MinGW GCC + Strict)---------------</b><br />
+g++.exe  -c "B:\aa_proga\encyclopedia of dutch life\Encyclopedia\hamlet_dynamic_proc\string_functions.cpp" -o "obj\Debug\encyclopedia of dutch life\Encyclopedia\hamlet_dynamic_proc\string_functions.o" -Wall -fexceptions  -g  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
+B:\aa_proga\encyclopedia of dutch life\Encyclopedia\hamlet_dynamic_proc\string_functions.cpp: In function 'char* find_char(const char*, char)':<br />
+<font color="#0000ff">B:\aa_proga\encyclopedia of dutch life\Encyclopedia\hamlet_dynamic_proc\string_functions.cpp:70:20: warning: cast from type 'const char*' to type 'char*' casts away qualifiers [-Wcast-qual]</font><br />
+     return (char*) str;<br />
+                    ^<br />
+B:\aa_proga\encyclopedia of dutch life\Encyclopedia\hamlet_dynamic_proc\string_functions.cpp: In function 'char* fget_string(char*, int, FILE*)':<br />
+<font color="#0000ff">B:\aa_proga\encyclopedia of dutch life\Encyclopedia\hamlet_dynamic_proc\string_functions.cpp:88:40: warning: conversion to 'char' from 'int' may alter its value [-Wconversion]</font><br />
+         if ((*str  = getc (file_pointer)) == '\n')<br />
+                                        ^<br />
+B:\aa_proga\encyclopedia of dutch life\Encyclopedia\hamlet_dynamic_proc\string_functions.cpp: In function 'char* string_copy(char*, char*)':<br />
+<font color="#0000ff">B:\aa_proga\encyclopedia of dutch life\Encyclopedia\hamlet_dynamic_proc\string_functions.cpp:139:36: warning: suggest parentheses around assignment used as truth value [-Wparentheses]</font><br />
+     while (*destination++ = *source++) {;}<br />
+                                    ^<br />
+g++.exe  -o bin\Debug\one_buffer_d_hamlet.exe obj\Debug\memory_free\elephant_calloc.o "obj\Debug\encyclopedia of dutch life\Encyclopedia\hamlet_dynamic_proc\d_hamlet_functions.o" "obj\Debug\encyclopedia of dutch life\Encyclopedia\hamlet_dynamic_proc\string_functions.o" "obj\Debug\encyclopedia of dutch life\Encyclopedia\one_buffer_d_hamlet\main.o"<br />
+Output size is 310,17 KB<br />
+<font color="#0000ff">Process terminated with status 0 (0 minutes, 1 seconds)</font><br />
+<font color="#0000ff">0 errors, 3 warnings (0 minutes, 1 seconds)</font><br />
+</tt>
+</body>
+</html>

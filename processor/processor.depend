@@ -1,0 +1,92 @@
+# depslib dependency file v1.0
+1650818530 source:b:\aa_proga\flip-flop\hamlet\d_hamlet_functions.cpp
+	"d_hamlet_functions.h"
+	"..\memory_free\elephant_calloc_extern.h"
+
+1650818530 b:\aa_proga\flip-flop\hamlet\d_hamlet_functions.h
+	"..\strings\string_funk.h"
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<assert.h>
+
+1635953774 b:\aa_proga\flip-flop\strings\string_funk.h
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+
+1651446529 b:\aa_proga\flip-flop\memory_free\elephant_calloc_extern.h
+
+1650818531 source:b:\aa_proga\flip-flop\memory_free\elephant_calloc.cpp
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"elephant_calloc_extern.h"
+
+1640103118 source:b:\aa_proga\flip-flop\square_solver\beer_equation.cpp
+	"beer_equation.h"
+
+1640103156 b:\aa_proga\flip-flop\square_solver\beer_equation.h
+	<limits.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<assert.h>
+	<stdbool.h>
+
+1635953774 source:b:\aa_proga\flip-flop\stack\stack.cpp
+	"stack.h"
+	<stdlib.h>
+	<assert.h>
+	<windows.h>
+	<winbase.h>
+	"..\strings\string_funk.h"
+
+1635953774 b:\aa_proga\flip-flop\stack\stack.h
+	<stdio.h>
+
+1635953774 source:b:\aa_proga\flip-flop\strings\string_functions.cpp
+	"string_funk.h"
+
+1636269790 source:b:\aa_proga\flip-flop\processor\asma.cpp
+	<stdio.h>
+	"processor.h"
+	"..\strings\string_funk.h"
+	"..\hamlet\d_hamlet_functions.h"
+	"..\square_solver\beer_equation.h"
+
+1651089811 b:\aa_proga\flip-flop\processor\processor.h
+	"..\strings\string_funk.h"
+	"..\stack\stack.h"
+	"..\hamlet\d_hamlet_functions.h"
+	"..\square_solver\beer_equation.h"
+	"cmd.h"
+
+1651446529 b:\aa_proga\flip-flop\processor\cmd.h
+
+1636122808 source:b:\aa_proga\flip-flop\processor\asma_funks.cpp
+	<stdio.h>
+	"processor.h"
+	"cmd.h"
+	"cmd.h"
+
+1640103088 source:b:\aa_proga\flip-flop\processor\proc.cpp
+	<stdio.h>
+	"processor.h"
+
+1651309086 source:b:\aa_proga\flip-flop\processor\proc_funks.cpp
+	<stdio.h>
+	"processor.h"
+	<math.h>
+	<assert.h>
+	"DSL.cpp"
+	"cmd.h"
+
+1636271305 source:b:\aa_proga\flip-flop\processor\disasm.cpp
+	<stdio.h>
+	"processor.h"
+
+1651309226 source:b:\aa_proga\flip-flop\processor\dsl.cpp
+
+1651340404 b:\aa_proga\flip-flop\processor\dsl.cpp
+

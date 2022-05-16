@@ -1,0 +1,30 @@
+// Sort straightly
+    say ("\nSorted lexicographically");
+    qsort (lines_ptrs, lines, sizeof (beg_end_ptr),
+    (int (*)(const void*,const void*)) struct_cmp_beg_ptr);
+
+     for (size_t line = 0; line < lines; line++)
+        {
+        printf ("%s\n", lines_ptrs[line].beg_ptr);
+        }
+
+    say_delimiter ();
+
+
+
+    // Sort reversely
+    say ("\nSorted poetically");
+    qsort (lines_ptrs, lines, sizeof (beg_end_ptr),
+    (int (*)(const void*,const void*)) struct_cmp_reversed_line);
+
+    // Free string memory
+    for (size_t line = 0; line < lines; line++)
+        {
+        printf ("%s\n", lines_ptrs[line].beg_ptr);
+        free (lines_ptrs[line].beg_ptr);
+        }
+
+    // Free structure memory
+    free (lines_ptrs);
+
+    fclose (file_pointer);

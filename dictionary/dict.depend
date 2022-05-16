@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1651254465 source:b:\aa_proga\flip-flop\dictionary\dict.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	"dict.h"
+
+1651254519 b:\aa_proga\flip-flop\dictionary\dict.h
+	<stdio.h>
+
+1651254544 source:b:\aa_proga\flip-flop\dictionary\main.cpp
+	<stdio.h>
+	"dict.h"
+

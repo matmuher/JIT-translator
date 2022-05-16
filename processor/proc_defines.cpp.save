@@ -1,0 +1,22 @@
+#define LOG_NEW_LINE putc ('\n', prc->prc_log)
+
+
+#define READ_SERVICE_STRUCT                             \
+    bin_info ma_bin;                                    \
+    fread (&ma_bin, sizeof (char), sizeof (ma_bin), bin)
+
+
+#define VERIFY_SERVICE_STRUCT            \
+    assert (ma_bin.signature == MY_SIGN);\
+    assert (ma_bin.version == version)
+
+
+#define READ_RECIPE                                            \
+    int* cooking_list = (int*) calloc (bin_size, sizeof (int));\
+    fread (cooking_list, sizeof (int), bin_size, bin)
+
+
+#define CLOSE_PROC_FILES \
+    
+
+#define PROC_EXECUTION

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<BrowseTracker_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="tree_funks.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="2135" topLine="0" />
+	</File>
+	<File name="dif_reader.cpp" open="1" top="0" tabpos="7">
+		<Cursor position="115" topLine="0" />
+		<BrowseMarks positions="1798" />
+	</File>
+	<File name="tex_dump.cpp" open="0" top="0" tabpos="7">
+		<Cursor position="388" topLine="0" />
+		<BrowseMarks positions="1089" />
+	</File>
+	<File name="console_dump.cpp" open="1" top="0" tabpos="10">
+		<Cursor position="45" topLine="0" />
+	</File>
+	<File name="tree_funks.h" open="0" top="0" tabpos="2">
+		<Cursor position="173" topLine="0" />
+	</File>
+	<File name="differ.cpp" open="0" top="0" tabpos="5">
+		<Cursor position="1467" topLine="40" />
+		<BrowseMarks positions="298" />
+		<Book_Marks positions="177" />
+	</File>
+	<File name="dot_dump.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="1454" topLine="3" />
+	</File>
+	<File name="diff_dsl.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="2462" topLine="48" />
+		<BrowseMarks positions="2195" />
+		<Book_Marks positions="212,212,202,202" />
+	</File>
+	<File name="diff_dsl.h" open="0" top="0" tabpos="2">
+		<Cursor position="129" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="6">
+		<Cursor position="985" topLine="0" />
+	</File>
+	<File name="optimizer.cpp" open="1" top="1" tabpos="8">
+		<Cursor position="5369" topLine="23" />
+		<BrowseMarks positions="141,5093" />
+		<Book_Marks positions="" />
+	</File>
+	<File name="safe_gets.cpp" open="0" top="0" tabpos="4">
+		<Cursor position="580" topLine="0" />
+	</File>
+	<File name="differ.h" open="1" top="0" tabpos="4">
+		<Cursor position="894" topLine="15" />
+		<Book_Marks positions="2506,2679,2679,2507,2853,2932,3138,3138" />
+	</File>
+</BrowseTracker_layout_file>

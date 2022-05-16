@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <string.h>
+#include "differ.h"
+#include ""
+
+
+int main (int, char* argv[])
+    {
+    char* file_name = argv[1] ? argv[1] : (char*) "asm.txt";
+
+
+    #if 1
+
+        const char* expression = "((13)*((x)^(2)))";
+
+        tree_reader t_reader = {};
+
+        t_reader.root = (char*) expression;
+        t_reader.begunok = (char*) expression;
+
+
+        node* tree_root = read_expression_recurs (&t_reader);
+
+        #if 1
+
+            node* diffed_tree_root = to_diff (tree_root);
+
+        #endif
+
+        #if 1
+
+            optimize_node_recurs (diffed_tree_root);
+
+        #endif
+
+    #endif
+
+    #if 1
+
+        FILE* dot_file = dot_dump_create ();
+
+        tree_dot_dump (diffed_tree_root, dot_file);
+
+        dot_dump_close (dot_file);
+
+    #endif
+
+    #if 1
+
+        FILE* tex_file = create_tex ("diff.tex");
+
+        tex_dump_recurs (tex_file, diffed_tree_root);
+
+        close_tex (tex_file);
+
+    #endif
+
+    memory_free ();
+    }

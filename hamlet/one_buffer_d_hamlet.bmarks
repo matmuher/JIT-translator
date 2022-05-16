@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<BrowseTracker_layout_file>
+	<ActiveTarget name="Debug" />
+	<File name="..\..\..\memory_free\elephant_calloc.cpp" open="1" top="0" tabpos="5">
+		<Cursor position="338" topLine="0" />
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="385" topLine="0" />
+	</File>
+	<File name="..\..\..\memory_free\elephant_calloc_extern.h" open="1" top="0" tabpos="4">
+		<Cursor position="116" topLine="0" />
+	</File>
+	<File name="..\hamlet_dynamic_proc\d_hamlet_functions.cpp" open="1" top="1" tabpos="6">
+		<Cursor position="89" topLine="0" />
+		<BrowseMarks positions="6453,7442" />
+		<Book_Marks positions="" />
+	</File>
+	<File name="..\hamlet_dynamic_proc\string_functions.cpp" open="1" top="0" tabpos="9">
+		<Cursor position="1" topLine="0" />
+		<BrowseMarks positions="1014,2045" />
+		<Book_Marks positions="" />
+	</File>
+	<File name="..\hamlet_dynamic_proc\d_hamlet_functions.h" open="1" top="0" tabpos="7">
+		<Cursor position="204" topLine="0" />
+		<BrowseMarks positions="1311" />
+	</File>
+	<File name="..\hamlet_dynamic_proc\string_funk.h" open="1" top="0" tabpos="8">
+		<Cursor position="162" topLine="0" />
+		<BrowseMarks positions="" />
+		<Book_Marks positions="" />
+	</File>
+</BrowseTracker_layout_file>
