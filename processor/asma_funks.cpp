@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "processor.h"
-#include "..\dictionary\dict.cpp" // Include cpp - cringe?
+#include "../dictionary/dict.cpp" // Include cpp - cringe?
 
 
 int* arg_process (char* str_arg, int* begunok, int* markers, int cmd_id, int arg, dict word_markers);

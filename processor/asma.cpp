@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "processor.h"
-#include "..\strings\string_funk.h"
-#include "..\hamlet\d_hamlet_functions.h"
-#include "..\square_solver\beer_equation.h"
+#include "../strings/string_funk.h"
+#include "../hamlet/d_hamlet_functions.h"
+#include "../square_solver/beer_equation.h"
 
 
 int main (int, char* argv[])
@@ -18,7 +18,5 @@ int main (int, char* argv[])
     size_t bin_size = 0;
     int* binary = create_binary (code, lines_num, &bin_size);
     write_binary (binary, bin_size);
-
-    system ("pause");
     }
 

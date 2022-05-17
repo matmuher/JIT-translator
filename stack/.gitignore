@@ -1,0 +1,8 @@
+*.save
+*.cbp
+*.depend
+*.layout
+*.html
+*.bmarks
+/bin
+/obj

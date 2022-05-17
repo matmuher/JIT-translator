@@ -1,0 +1,194 @@
+------------------------------
+stack <int> [0064FE88]
+ size: 0, capacity [00000000]: 0, data [00000000]:
+	{
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 1, capacity [00712C98]: 2, data [00712C98]:
+	{
+	data[0] = 1;
+	data[1] = POISONED;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 1, capacity [00712C98]: 2, data [00712C98]:
+	{
+	data[0] = 1;
+	data[1] = POISONED;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 2, capacity [00712C98]: 2, data [00712C98]:
+	{
+	data[0] = 1;
+	data[1] = 2;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 2, capacity [00712C98]: 2, data [00712C98]:
+	{
+	data[0] = 1;
+	data[1] = 2;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 3, capacity [00710D70]: 4, data [00710D70]:
+	{
+	data[0] = 1;
+	data[1] = 2;
+	data[2] = 3;
+	data[3] = POISONED;
+	}
+ // Capacity changed to 4 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 3, capacity [00710D70]: 4, data [00710D70]:
+	{
+	data[0] = 1;
+	data[1] = 2;
+	data[2] = 3;
+	data[3] = POISONED;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 4, capacity [00710D70]: 4, data [00710D70]:
+	{
+	data[0] = 1;
+	data[1] = 2;
+	data[2] = 3;
+	data[3] = 4;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 4, capacity [00710D70]: 4, data [00710D70]:
+	{
+	data[0] = 1;
+	data[1] = 2;
+	data[2] = 3;
+	data[3] = 4;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 5, capacity [00710D70]: 8, data [00710D70]:
+	{
+	data[0] = 1;
+	data[1] = 2;
+	data[2] = 3;
+	data[3] = 4;
+	data[4] = 5;
+	data[5] = POISONED;
+	data[6] = POISONED;
+	data[7] = POISONED;
+	}
+ // Capacity changed to 8 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 5, capacity [00710D70]: 8, data [00710D70]:
+	{
+	data[0] = 1;
+	data[1] = 2;
+	data[2] = 3;
+	data[3] = 4;
+	data[4] = 5;
+	data[5] = POISONED;
+	data[6] = POISONED;
+	data[7] = POISONED;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 6, capacity [00710D70]: 8, data [00710D70]:
+	{
+	data[0] = 1;
+	data[1] = 2;
+	data[2] = 3;
+	data[3] = 4;
+	data[4] = 5;
+	data[5] = 6;
+	data[6] = POISONED;
+	data[7] = POISONED;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 6, capacity [00710D70]: 8, data [00710D70]:
+	{
+	data[0] = 1;
+	data[1] = 2;
+	data[2] = 3;
+	data[3] = 4;
+	data[4] = 5;
+	data[5] = 6;
+	data[6] = POISONED;
+	data[7] = POISONED;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 7, capacity [00710D70]: 8, data [00710D70]:
+	{
+	data[0] = 1;
+	data[1] = 2;
+	data[2] = 3;
+	data[3] = 4;
+	data[4] = 5;
+	data[5] = 6;
+	data[6] = 7;
+	data[7] = POISONED;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0064FE88]
+ size: 7, capacity [00710D70]: 8, data [00000004]:
+*Start pop*
+[Erros-Bip-Bop]
+[WARNING] DATA POINTER IS LOCKED
+------------------------------
+

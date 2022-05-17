@@ -10,8 +10,8 @@ int main ()
 
     // LOGS AND BINARY OPEN
     FILE* bin = fopen ("binary_my_binary", "rb");
-    FILE* log = fopen ("stack_log.txt", "w");
-    FILE* prc_log = fopen ("prc_log.txt", "w");
+    FILE* log = fopen ("logs/stack_log.txt", "w");
+    FILE* prc_log = fopen ("logs/prc_log.txt", "w");
 
 
     // READ SERVICE STRUCTURE

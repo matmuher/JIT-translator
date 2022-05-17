@@ -1,5 +1,5 @@
 #include "d_hamlet_functions.h"
-#include "..\memory_free\elephant_calloc_extern.h"
+#include "../memory_free/elephant_calloc_extern.h"
 
 
 int get_size (FILE* file_pointer)

@@ -1,0 +1,107 @@
+# depslib dependency file v1.0
+1652814107 source:/home/matmuh/Desktop/compiled_language/dictionary/dict.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	"dict.h"
+
+1652812688 /home/matmuh/Desktop/compiled_language/dictionary/dict.h
+	<stdio.h>
+
+1652812688 source:/home/matmuh/Desktop/compiled_language/differ/dot_dump.cpp
+	<stdio.h>
+	<stdlib.h>
+	"differ.h"
+
+1652813194 /home/matmuh/Desktop/compiled_language/differ/differ.h
+	<stdlib.h>
+	<stdio.h>
+	"../memory_free/elephant_calloc_extern.h"
+
+1652812688 /home/matmuh/Desktop/compiled_language/memory_free/elephant_calloc_extern.h
+
+1652812688 source:/home/matmuh/Desktop/compiled_language/differ/optimizer.cpp
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<ctype.h>
+	"differ.h"
+	"tree_funks.h"
+
+1652812688 /home/matmuh/Desktop/compiled_language/differ/tree_funks.h
+	"differ.h"
+
+1652812688 source:/home/matmuh/Desktop/compiled_language/differ/tree_funks.cpp
+	<string.h>
+	"differ.h"
+
+1652812688 source:/home/matmuh/Desktop/compiled_language/memory_free/elephant_calloc.cpp
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"elephant_calloc_extern.h"
+
+1652813305 source:/home/matmuh/Desktop/compiled_language/russkie_alga!/backend.cpp
+	"../differ/tree_funks.h"
+	"../differ/differ.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<assert.h>
+	"backend.h"
+
+1652812689 source:/home/matmuh/Desktop/compiled_language/russkie_alga!/compile.cpp
+	"compile.h"
+
+1652813354 source:/home/matmuh/Desktop/compiled_language/russkie_alga!/get_strings.cpp
+	<string.h>
+	"../hamlet/d_hamlet_functions.h"
+	"../memory_free/elephant_calloc_extern.h"
+
+1652813228 /home/matmuh/Desktop/compiled_language/hamlet/d_hamlet_functions.h
+	"../strings/string_funk.h"
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<assert.h>
+
+1652812689 /home/matmuh/Desktop/compiled_language/strings/string_funk.h
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+
+1652813459 source:/home/matmuh/Desktop/compiled_language/russkie_alga!/great_grammar.cpp
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<math.h>
+	<string.h>
+	"../differ/tree_funks.h"
+	"great_grammar.h"
+
+1652812689 /home/matmuh/Desktop/compiled_language/russkie_alga!/backend.h
+
+1652813250 /home/matmuh/Desktop/compiled_language/russkie_alga!/compile.h
+	<stdio.h>
+	<string.h>
+	"great_grammar.h"
+	"lexo_parser.h"
+	"../hamlet/d_hamlet_functions.h"
+	"../dictionary/dict.h"
+	"to_asm.h"
+
+1652813328 /home/matmuh/Desktop/compiled_language/russkie_alga!/great_grammar.h
+	"../differ/differ.h"
+	"lexo_parser.h"
+
+1652812689 /home/matmuh/Desktop/compiled_language/russkie_alga!/lexo_parser.h
+
+1652813276 /home/matmuh/Desktop/compiled_language/russkie_alga!/to_asm.h
+	<assert.h>
+	<string.h>
+	"../differ/tree_funks.h"
+	"../dictionary/dict.h"
+	"../differ/differ.h"
+

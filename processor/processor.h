@@ -2,10 +2,10 @@
 #define PROCESSOR_H_INCLUDED
 
 
-#include "..\strings\string_funk.h"
-#include "..\stack\stack.h"
-#include "..\hamlet\d_hamlet_functions.h"
-#include "..\square_solver\beer_equation.h"
+#include "../strings/string_funk.h"
+#include "../stack/stack.h"
+#include "../hamlet/d_hamlet_functions.h"
+#include "../square_solver/beer_equation.h"
 
 
 // Historical heritage

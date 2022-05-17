@@ -2,7 +2,7 @@
 #define D_HAMLET_FUNCTIONS_H_INCLUDED
 
 
-#include "..\strings\string_funk.h"
+#include "../strings/string_funk.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>

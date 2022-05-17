@@ -1,0 +1,41 @@
+push 1
+pop ax // факториальный снежный ком
+
+push 1
+pop bx // счётчик
+
+say
+
+in
+pop cx // ограничитель
+
+push cx
+push 0
+je :2
+
+:1
+
+push ax
+push bx
+mlt
+pop ax // увеличиваем ком
+
+push bx
+push 1
+add
+pop bx // увеличиваем счётчик
+
+push bx
+push cx
+jae :1
+
+push ax
+out
+
+hlt
+
+:2
+
+push 1
+out
+hlt
