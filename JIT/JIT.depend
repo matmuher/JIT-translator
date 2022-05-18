@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1652869170 source:/home/matmuh/Desktop/compiled_language/JIT/optcodes.cpp
+	"JIT.h"
+
+1652871172 /home/matmuh/Desktop/compiled_language/JIT/JIT.h
+	<stdint.h>
+	<stdio.h>
+	<stdlib.h>
+	<sys/mman.h>
+
+1652869241 source:/home/matmuh/Desktop/compiled_language/JIT/JIT.cpp
+	"JIT.h"
+
+1652869347 source:/home/matmuh/Desktop/compiled_language/JIT/main.cpp
+	"JIT.h"
+
