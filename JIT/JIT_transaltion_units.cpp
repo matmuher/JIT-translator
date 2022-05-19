@@ -25,7 +25,7 @@ void ram_init (jit* ma_jit)
 
     // Set register for relative addressing in RAM
     opcode_ptr -= 2;
-    *((int16_t*) opcode_ptr) = MOVABS_RCX;
+    *((int16_t*) opcode_ptr) = MOVABS_R11;
     write_opcode(ma_jit, ptr_8bit(movabs_opdcode), TEN_BYTES);
 }
 
@@ -104,22 +104,30 @@ void write_opcode(jit* ma_jit, const int8_t* opcode_ptr, int8_t opcode_size)
 
 void translate_ariphmetic(jit* ma_jit, int32_t cmd)
 {
-    write_opcode(ma_jit, ptr_8bit(&POP_R8), TWO_BYTE);
-    write_opcode(ma_jit, ptr_8bit(&POP_R9), TWO_BYTE);
+    write_opcode(ma_jit, ptr_8bit(&POP_OP1), ONE_BYTE);
+    write_opcode(ma_jit, ptr_8bit(&POP_OP2), ONE_BYTE);
 
     switch(cmd)
     {
         case(cmd_add):
-            write_opcode(ma_jit, ptr_8bit(&ADD_R8_R9), THREE_BYTE);
+            write_opcode(ma_jit, ptr_8bit(&ADD_OP12), THREE_BYTE);
             break;
         case(cmd_sub):
+            write_opcode(ma_jit, ptr_8bit(&SUB_OP12), THREE_BYTE);
+            break;
         case(cmd_mlt):
+            write_opcode(ma_jit, ptr_8bit(&ZERO_RDX), THREE_BYTE);
+            write_opcode(ma_jit, ptr_8bit(&IMUL_OP12), TWO_BYTE);
+            break;
         case(cmd_saw):
+            write_opcode(ma_jit, ptr_8bit(&ZERO_RDX), THREE_BYTE);
+            write_opcode(ma_jit, ptr_8bit(&IDIV_OP12), TWO_BYTE);
+            break;
         default:
             err("Unknown ariphmetic");
     }
 
-    write_opcode(ma_jit, ptr_8bit(&PUSH_R8), TWO_BYTE);
+    write_opcode(ma_jit, ptr_8bit(&PUSH_OP1), ONE_BYTE);
     ma_jit->src_ip += ZERO_ARGS;
 }
 
@@ -150,20 +158,21 @@ void translate_push (jit* ma_jit, int32_t cmd, int32_t arg)
     {
         case(REG_REL_MASK):
             {
-                uint32_t reg_rel_push = PUSH_REL | (arg << TWO_BYTE * 8);
-                write_opcode(ma_jit, ptr_8bit(&reg_rel_push), THREE_BYTE);
+                // Put shift in the 4th byte
+                uint32_t reg_rel_push = PUSH_REL | (arg << THREE_BYTE * 8);
+                write_opcode(ma_jit, ptr_8bit(&reg_rel_push), FOUR_BYTE);
                 break;
             }
         case(REG_MASK):
             {
-                uint8_t push_reg = PUSH_REG + arg;
-                write_opcode(ma_jit, ptr_8bit(&push_reg), ONE_BYTE);
+                uint16_t push_reg = PUSH_REG + (arg << ONE_BYTE * 8);
+                write_opcode(ma_jit, ptr_8bit(&push_reg), TWO_BYTE);
                 break;
             }
 
         case(IMM_MASK):
             {
-                // Put opcode in the begging
+                // Put opcode in the 1st byte
                 uint64_t imm_push = PUSH_IMM | (arg << ONE_BYTE * 8);
                 write_opcode(ma_jit, ptr_8bit(&imm_push), FIVE_BYTE);
                 break;
@@ -184,14 +193,14 @@ void translate_pop (jit* ma_jit, int32_t cmd, int32_t arg)
     {
         case(REG_REL_MASK):
             {
-                uint32_t reg_rel_push = POP_REL | (arg << TWO_BYTE * 8);
-                write_opcode(ma_jit, ptr_8bit(&reg_rel_push), THREE_BYTE);
+                uint32_t reg_rel_push = POP_REL | (arg << THREE_BYTE * 8);
+                write_opcode(ma_jit, ptr_8bit(&reg_rel_push), FOUR_BYTE);
                 break;
             }
         case(REG_MASK):
             {
-                uint8_t pop_reg = POP_REG + arg;
-                write_opcode(ma_jit, ptr_8bit(&pop_reg), ONE_BYTE);
+                uint16_t pop_reg = POP_REG + (arg << ONE_BYTE * 8);
+                write_opcode(ma_jit, ptr_8bit(&pop_reg), TWO_BYTE);
                 break;
             }
         case(IMM_MASK):

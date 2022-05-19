@@ -4,19 +4,23 @@ const int8_t    NOP         = 0x90,
                 LEAVE       = 0xC9,
                 RET         = 0xC3,
                 PUSH_IMM    = 0x68,
-                PUSH_REG    = 0x50,
-                POP_REG     = 0x58;
+                POP_OP1     = 0x58, // RAX
+                POP_OP2     = 0x59, // RCX
+                PUSH_OP1    = 0x50;
 
-const int16_t   POP_R8      = 0x5841,
-                POP_R9      = 0x5941,
-                PUSH_R8     = 0x5041,
-                MOVABS_RSI  = 0xBE48,
-                MOVABS_RCX  = 0xB948;
+const int16_t   MOVABS_RSI  = 0xBE48,
+                MOVABS_R11  = 0xBB49,
+                IMUL_OP12   = 0xE9F7,
+                IDIV_OP12   = 0xF9F8,
+                PUSH_REG    = 0x5241,   // R11
+                POP_REG     = 0x5A41;
 
-const int32_t   ADD_R8_R9   = 0x00C8014D,
-                POP_EMPTY   = 0x08C48348,
-                PUSH_RAM    = 0x000076FF,   // Push ram. Shift is to be in 3rd byte
-                PUSH_REL    = 0x000071FF,   // Push from RAM relatively base register
+const int32_t   POP_EMPTY   = 0x08C48348,
+                PUSH_RAM    = 0x000076FF,   // Push ram. Shift is to be in 3rd byte.
                 POP_RAM     = 0x0000468F,
-                POP_REL     = 0x0000418F;
+                PUSH_REL    = 0x0073FF41,   // Register-relative addressing push.
+                POP_REL     = 0x00438F41,   // Shit is to be in 4th byte.
+                SUB_OP12    = 0x00C82948,
+                ADD_OP12    = 0x00C80148,
+                ZERO_RDX    = 0x00D23148;
 

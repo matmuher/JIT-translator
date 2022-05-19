@@ -31,6 +31,14 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="../processor/cmd.h" />
+		<Unit filename="../processor/processor.h" />
+		<Unit filename="JIT.cpp" />
+		<Unit filename="JIT.h" />
+		<Unit filename="JIT_service.cpp" />
+		<Unit filename="JIT_transaltion_units.cpp" />
+		<Unit filename="main.cpp" />
+		<Unit filename="optcodes.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

@@ -25,7 +25,7 @@ void jit_destr (jit* ma_jit);
 void fill_with_nops (jit* ma_jit);
 void put_ret (jit* ma_jit, int8_t bin_buf_shift);
 void translate_src_bin (jit* ma_jit);
-void bin_execute (int8_t* array);
+int64_t bin_execute (int8_t* array);
 
 // Service functions
 void print_bytes (int8_t* array, int32_t array_size, int32_t row_len);
@@ -47,20 +47,24 @@ extern const int8_t NOP,
                     LEAVE,
                     RET,
                     PUSH_IMM,
-                    PUSH_REG,
-                    POP_REG;
+                    POP_OP1,    // RAX
+                    POP_OP2,    // RCX
+                    PUSH_OP1;
 
-extern const int16_t    POP_R8,
-                        POP_R9,
-                        PUSH_R8,
-                        MOVABS_RSI,
-                        MOVABS_RCX;
+extern const int16_t    MOVABS_RSI,
+                        MOVABS_R11,
+                        IMUL_OP12,
+                        IDIV_OP12,
+                        PUSH_REG,   // R11
+                        POP_REG;
 
-extern const int32_t    ADD_R8_R9,
-                        POP_EMPTY,
+extern const int32_t    POP_EMPTY,
                         PUSH_RAM,
-                        PUSH_REL,
                         POP_RAM,
-                        POP_REL;
+                        PUSH_REL,
+                        POP_REL,
+                        SUB_OP12,
+                        ADD_OP12,
+                        ZERO_RDX;
 
 #endif // JIT_H_INCLUDED

@@ -38,12 +38,12 @@ void jit_destr (jit* ma_jit)
     free(ma_jit);
 }
 
-typedef void (*phony_function)(void);
+typedef int64_t (*phony_function)(void);
 
-void bin_execute (int8_t* array)
+int64_t bin_execute (int8_t* array)
 {
     phony_function ma_func = (phony_function) array;
-    ma_func();
+    return ma_func();
 }
 
 
