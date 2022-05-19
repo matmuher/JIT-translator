@@ -40,6 +40,7 @@ enum OPCODE_SIZE
     THREE_BYTE  = 3,
     FOUR_BYTE   = 4,
     FIVE_BYTE   = 5,
+    SIX_BYTE    = 6,
     TEN_BYTES   = 10,
 };
 
@@ -57,7 +58,13 @@ extern const int8_t NOP,
 extern const int16_t    MOVABS_RSI,
                         MOVABS_R11,
                         PUSH_REG,   // R11
-                        POP_REG;
+                        POP_REG,
+                        JG_REL,
+                        JL_REL,
+                        JE_REL,
+                        JNE_REL,
+                        JGE_REL,
+                        JLE_REL;
 
 extern const int32_t    POP_EMPTY,
                         PUSH_RAM,
@@ -68,6 +75,7 @@ extern const int32_t    POP_EMPTY,
                         ADD_OP12,
                         IMUL_OP12,
                         IDIV_OP12,
-                        ZERO_RDX;
+                        ZERO_RDX,
+                        CMP_OP12;
 
 #endif // JIT_H_INCLUDED

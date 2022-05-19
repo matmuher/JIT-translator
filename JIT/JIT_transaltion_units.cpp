@@ -6,6 +6,7 @@ void translate_ariphmetic(jit* ma_jit, int32_t cmd);
 void translate_memory_access(jit* ma_jit, int32_t cmd);
 void translate_hlt(jit* ma_jit, int32_t cmd);
 void translate_jump(jit* ma_jit, int32_t cmd);
+void translate_cond_jump (jit* ma_jit, int32_t cmd);
 
 void fill_with_nops (jit* ma_jit)
 {
@@ -34,10 +35,10 @@ extern void translate_cmd (jit* ma_jit, int32_t cmd);
 
 void translate_src_bin (jit* ma_jit)
 {
-    ram_init(ma_jit);
-
     for (int8_t run_id = 0; run_id < 2; run_id++)
     {
+        ram_init(ma_jit);
+
         while ((ma_jit->src_ip) < (ma_jit->src_bin_size))
         {
             printf("%d: %p\n", ma_jit->src_ip, ma_jit->buf_ptr);
@@ -55,8 +56,8 @@ void translate_cmd (jit* ma_jit, int32_t cmd)
     int32_t pure_cmd = cmd & CMD_MASK;
 
     const int8_t PURE_CMD_LEN = 3;
-    char cmd_hex[PURE_CMD_LEN] = {};
-    sprintf (cmd_hex, "%x", pure_cmd);
+    char cmd_dec[PURE_CMD_LEN] = {};
+    sprintf (cmd_dec, "%d", pure_cmd);
 
     switch (pure_cmd)
     {
@@ -80,7 +81,6 @@ void translate_cmd (jit* ma_jit, int32_t cmd)
         case cmd_jump:
             translate_jump(ma_jit, cmd);
             break;
-        #if 0
         case cmd_ja:
         case cmd_jb:
         case cmd_je:
@@ -89,8 +89,9 @@ void translate_cmd (jit* ma_jit, int32_t cmd)
         case cmd_jbe:
         case cmd_call:
         case cmd_ret:
-
-
+            translate_cond_jump(ma_jit, cmd);
+            break;
+        #if 0
         case cmd_say:
             translate_nop(cmd);
             break;
@@ -104,7 +105,7 @@ void translate_cmd (jit* ma_jit, int32_t cmd)
             translate_ui(cmd); // ui = user interaction
         #endif
 
-        default: err("Unrecognized cmd", cmd_hex);
+        default: err("Unrecognized cmd", cmd_dec);
     }
 }
 
@@ -231,11 +232,11 @@ void translate_pop (jit* ma_jit, int32_t cmd, int32_t arg)
 
 void translate_hlt(jit* ma_jit, int32_t cmd)
 {
-    // Return to bin_execute function
+    // Return to bin_execute() function
     write_opcode(ma_jit, ptr_8bit(&RET), ONE_BYTE);
 }
 
-void translate_jump(jit* ma_jit, int32_t cmd)
+void translate_jump (jit* ma_jit, int32_t cmd)
 {
     // Argument is shift in source bin file
     int32_t arg = ma_jit->src_bin[ma_jit->src_ip] + 1;
@@ -245,6 +246,51 @@ void translate_jump(jit* ma_jit, int32_t cmd)
     *((int32_t*) (jump_rel + 1)) = shift;
 
     write_opcode(ma_jit, ptr_8bit(jump_rel), FIVE_BYTE);
+
+    ma_jit->src_ip += ONE_ARG;
+}
+
+void make_comparison (jit* ma_jit)
+{
+    write_opcode(ma_jit, ptr_8bit(&POP_OP1), ONE_BYTE);
+    write_opcode(ma_jit, ptr_8bit(&POP_OP2), ONE_BYTE);
+    write_opcode(ma_jit, ptr_8bit(&CMP_OP12), THREE_BYTE);
+}
+
+void translate_cond_jump (jit* ma_jit, int32_t cmd)
+{
+    make_comparison(ma_jit);
+
+    // Argument is shift in source bin file
+    int32_t arg = ma_jit->src_bin[ma_jit->src_ip] + 1;
+    int32_t shift = (intptr_t) ma_jit->cmd_equivalent[arg] - ((intptr_t) ma_jit->buf_ptr + SIX_BYTE);
+
+    int16_t jump_cond_rel[SIX_BYTE] = {};
+    switch (cmd & CMD_MASK)
+    {
+        case cmd_ja:
+            jump_cond_rel[0] = JG_REL;
+            break;
+        case cmd_jb:
+            jump_cond_rel[0] = JL_REL;
+            break;
+        case cmd_je:
+            jump_cond_rel[0] = JE_REL;
+            break;
+        case cmd_jne:
+            jump_cond_rel[0] = JNE_REL;
+            break;
+        case cmd_jae:
+            jump_cond_rel[0] = JGE_REL;
+            break;
+        case cmd_jbe:
+            jump_cond_rel[0] = JLE_REL;
+            break;
+    }
+
+    *((int32_t*) (jump_cond_rel + 1)) = shift;
+
+    write_opcode(ma_jit, ptr_8bit(jump_cond_rel), SIX_BYTE);
 
     ma_jit->src_ip += ONE_ARG;
 }

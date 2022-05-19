@@ -1,12 +1,33 @@
-push 2
-push 8
+push 9
+push 9
 
-jump :1
-mlt
+je :6
+:6
+
+push 9
+push 9
+
+jne :1
+push 1
 :1
-saw
 
-pop 1
+ja :2
+push 2
+:2
+
+jae :4
+push 4
+:4
+
+jb :3
+push 3
+:3
+
+jbe :5
+push 5
+:5
+
+pop 2
 
 hlt
 

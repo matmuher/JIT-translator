@@ -4,6 +4,8 @@ int main ()
 {
     const int32_t BIN_BUF_SIZE = 50;
 
+    // system("cd .. && ./ma_asm asm_scripts/sum.txt");
+
     jit* ma_jit = jit_init(BIN_BUF_SIZE, "../binary_my_binary");
 
     fill_with_nops(ma_jit);
