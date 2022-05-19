@@ -1,11 +1,6 @@
-push 2
-push 2
-mlt
-push 4
-mlt
 push 8
+push 2
 saw
 pop 1
-
 hlt
 

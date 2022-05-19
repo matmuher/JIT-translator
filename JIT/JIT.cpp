@@ -16,9 +16,9 @@ jit* jit_init (int32_t bin_buf_size, const char* src_bin_path)
 
     // Allocate buffer for execution and for RAM
     if (posix_memalign ((void**) &ma_jit->bin_buf, PAGE_SIZE, sizeof(int8_t) * bin_buf_size))
-        err("posix_memalign can't allocate aligned memory");
+        err("Can't allocate aligned memory for bin_buf", "posix_memalign");
     if(mprotect(ma_jit->bin_buf, bin_buf_size, PROT_EXEC | PROT_WRITE | PROT_READ))
-        err("mprotect can't give needed rights");
+        err("Can't give needed rights", "mprotect");
     ma_jit->buf_ptr = ma_jit->bin_buf;
     ma_jit->ram_ptr = (int64_t*)(ma_jit->bin_buf + bin_buf_size);
 
@@ -27,6 +27,10 @@ jit* jit_init (int32_t bin_buf_size, const char* src_bin_path)
     // Load source binary
     read_src_bin(ma_jit, src_bin_path);
     ma_jit->src_ip = 0;
+
+    if (!(ma_jit->cmd_equivalent = (int8_t**) calloc (ma_jit->src_bin_size, sizeof(int8_t*))))
+        err("can't allocate memory for cmd_equivalent", "calloc");
+
 
     return ma_jit;
 }

@@ -5,6 +5,7 @@ int8_t* ptr_8bit (const void* addr);
 void translate_ariphmetic(jit* ma_jit, int32_t cmd);
 void translate_memory_access(jit* ma_jit, int32_t cmd);
 void translate_hlt(jit* ma_jit, int32_t cmd);
+void translate_jump(jit* ma_jit, int32_t cmd);
 
 void fill_with_nops (jit* ma_jit)
 {
@@ -36,7 +37,10 @@ void translate_src_bin (jit* ma_jit)
     ram_init(ma_jit);
 
     while ((ma_jit->src_ip) < (ma_jit->src_bin_size))
+    {
+        ma_jit->cmd_equivalent[ma_jit->src_ip] = ma_jit->buf_ptr;
         translate_cmd(ma_jit, ma_jit->src_bin[ma_jit->src_ip++]);
+    }
 }
 
 void translate_cmd (jit* ma_jit, int32_t cmd)
@@ -65,8 +69,11 @@ void translate_cmd (jit* ma_jit, int32_t cmd)
             translate_hlt(ma_jit, cmd);
             break;
 
-        #if 0
+
         case cmd_jump:
+            translate_jump(ma_jit, cmd);
+            break;
+        #if 0
         case cmd_ja:
         case cmd_jb:
         case cmd_je:
@@ -75,8 +82,7 @@ void translate_cmd (jit* ma_jit, int32_t cmd)
         case cmd_jbe:
         case cmd_call:
         case cmd_ret:
-            translate_jump(cmd);
-            break;
+
 
         case cmd_say:
             translate_nop(cmd);
@@ -117,11 +123,11 @@ void translate_ariphmetic(jit* ma_jit, int32_t cmd)
             break;
         case(cmd_mlt):
             write_opcode(ma_jit, ptr_8bit(&ZERO_RDX), THREE_BYTE);
-            write_opcode(ma_jit, ptr_8bit(&IMUL_OP12), TWO_BYTE);
+            write_opcode(ma_jit, ptr_8bit(&IMUL_OP12), THREE_BYTE);
             break;
         case(cmd_saw):
             write_opcode(ma_jit, ptr_8bit(&ZERO_RDX), THREE_BYTE);
-            write_opcode(ma_jit, ptr_8bit(&IDIV_OP12), TWO_BYTE);
+            write_opcode(ma_jit, ptr_8bit(&IDIV_OP12), THREE_BYTE);
             break;
         default:
             err("Unknown ariphmetic");
@@ -220,6 +226,18 @@ void translate_hlt(jit* ma_jit, int32_t cmd)
 {
     // Return to bin_execute function
     write_opcode(ma_jit, ptr_8bit(&RET), ONE_BYTE);
+}
+
+void translate_jump(jit* ma_jit, int32_t cmd)
+{
+    int32_t arg = ma_jit->src_bin[ma_jit->src_ip];
+    int32_t shift = (intptr_t) ma_jit->cmd_equivalent[arg] - (intptr_t) ma_jit->buf_ptr - FIVE_BYTE;
+    int8_t jump_rel[FIVE_BYTE] = {JUMP_REL};
+    *((int32_t*) (jump_rel + 1)) = shift;
+
+    write_opcode(ma_jit, ptr_8bit(jump_rel), FIVE_BYTE);
+
+    ma_jit->src_ip += ONE_ARG;
 }
 
 int8_t* ptr_8bit (const void* addr)

@@ -1,5 +1,5 @@
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
+stack <int> [0x7ffc72aff090]
  size: 0, capacity [(nil)]: 0, data [(nil)]:
 *Start push*
 [Erros-Bip-Bop]
@@ -8,8 +8,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 2;
 	data[1] = POISONED;
@@ -19,8 +19,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 2;
 	data[1] = POISONED;
@@ -30,8 +30,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 2, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 2, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 2;
 	data[1] = 2;
@@ -40,29 +40,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 2, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
-	{
-	data[0] = 2;
-	data[1] = 2;
-	}
-*Start pop*
-[Erros-Bip-Bop]
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
-	{
-	data[0] = 2;
-	data[1] = 2;
-	}
-[Erros-Bip-Bop]
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 2, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 2;
 	data[1] = 2;
@@ -72,8 +51,29 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 0, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 2;
+	data[1] = 2;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 2;
+	data[1] = 2;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 0, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 2;
 	}
@@ -82,8 +82,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 0, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 0, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 2;
 	}
@@ -92,8 +92,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 4;
 	}
@@ -101,8 +101,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 4;
 	}
@@ -111,8 +111,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 2, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 2, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 4;
 	data[1] = 4;
@@ -122,8 +122,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 2, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 2, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 4;
 	data[1] = 4;
@@ -133,8 +133,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 4;
 	data[1] = 4;
@@ -143,8 +143,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 4;
 	data[1] = 4;
@@ -154,8 +154,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 0, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 0, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 4;
 	}
@@ -164,8 +164,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 0, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 0, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 4;
 	}
@@ -174,8 +174,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 16;
 	}
@@ -183,8 +183,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 16;
 	}
@@ -193,8 +193,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 2, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 2, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 16;
 	data[1] = 8;
@@ -204,8 +204,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 2, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 2, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 16;
 	data[1] = 8;
@@ -215,8 +215,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 16;
 	data[1] = 8;
@@ -225,8 +225,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 2, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 16;
 	data[1] = 8;
@@ -236,8 +236,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 0, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 0, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 16;
 	}
@@ -246,8 +246,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 0, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 0, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 16;
 	}
@@ -256,8 +256,8 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 0;
 	}
@@ -265,21 +265,147 @@ stack <int> [0x7ffe1465c1f0]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 1, capacity [0x5613a3a97cc0]: 1, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
 	{
 	data[0] = 0;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 2, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	data[1] = 4;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 2, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	data[1] = 4;
 	}
 *Start pop*
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe1465c1f0]
- size: 0, capacity [0x5613a3a97cc0]: 0, data [0x5613a3a97cc8]:
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
 	{
+	data[0] = 0;
+	data[1] = 4;
 	}
- // Capacity changed to 0 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	data[1] = 4;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 0, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	}
+ // Capacity changed to 1 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 0, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 2, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	data[1] = 8;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 2, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	data[1] = 8;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	data[1] = 8;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 1, capacity [0x5648b0e4ccd0]: 2, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	data[1] = 8;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7ffc72aff090]
+ size: 0, capacity [0x5648b0e4ccd0]: 1, data [0x5648b0e4ccd8]:
+	{
+	data[0] = 0;
+	}
+ // Capacity changed to 1 //
 [Erros-Bip-Bop]
 ------------------------------
 
