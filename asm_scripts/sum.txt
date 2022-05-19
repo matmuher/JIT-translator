@@ -1,6 +1,7 @@
 push 9
 push 9
-
+say
+say
 je :6
 :6
 

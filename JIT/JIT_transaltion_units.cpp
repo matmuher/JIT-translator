@@ -7,6 +7,7 @@ void translate_memory_access(jit* ma_jit, int32_t cmd);
 void translate_hlt(jit* ma_jit, int32_t cmd);
 void translate_jump(jit* ma_jit, int32_t cmd);
 void translate_cond_jump (jit* ma_jit, int32_t cmd);
+void translate_nop (jit* ma_jit);
 
 void fill_with_nops (jit* ma_jit)
 {
@@ -91,11 +92,10 @@ void translate_cmd (jit* ma_jit, int32_t cmd)
         case cmd_ret:
             translate_cond_jump(ma_jit, cmd);
             break;
-        #if 0
         case cmd_say:
-            translate_nop(cmd);
+            translate_nop(ma_jit);
             break;
-
+        #if 0
         case cmd_sqrt:
             translate_sqrt(cmd);
             break;
@@ -114,6 +114,11 @@ void write_opcode(jit* ma_jit, const int8_t* opcode_ptr, int8_t opcode_size)
     const int8_t* opcode_end = opcode_ptr + opcode_size;
     while (opcode_ptr < opcode_end)
         *(ma_jit->buf_ptr++) = *(opcode_ptr++);
+}
+
+void translate_nop (jit* ma_jit)
+{
+    write_opcode(ma_jit, ptr_8bit(&NOP), ONE_BYTE);
 }
 
 void translate_ariphmetic(jit* ma_jit, int32_t cmd)
