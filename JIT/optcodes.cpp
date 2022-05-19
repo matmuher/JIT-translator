@@ -7,7 +7,9 @@ const int8_t    NOP         = 0x90,
                 POP_OP1     = 0x58, // RAX
                 POP_OP2     = 0x59, // RCX
                 PUSH_OP1    = 0x50,
-                JUMP_REL    = 0xE9;
+                JUMP_REL    = 0xE9,
+                CALL        = 0xE8,
+                POP_RDI     = 0x5F;
 
 
 
@@ -22,7 +24,8 @@ const int16_t   MOVABS_RSI  = 0xBE48,
                 JGE_REL     = 0x8D0F,
                 JLE_REL     = 0x8E0F;
 
-const int32_t   POP_EMPTY   = 0x08C48348,
+const int32_t   POP_EMPTY   = 0x08C48348,   // Are used to stack align
+                PUSH_EMPTY   = 0x08EC8348,
                 PUSH_RAM    = 0x000076FF,   // Push ram. Shift is to be in 3rd byte.
                 POP_RAM     = 0x0000468F,
                 PUSH_REL    = 0x0073FF41,   // Register-relative addressing push.

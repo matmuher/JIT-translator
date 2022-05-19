@@ -8,6 +8,9 @@ void translate_hlt(jit* ma_jit, int32_t cmd);
 void translate_jump(jit* ma_jit, int32_t cmd);
 void translate_cond_jump (jit* ma_jit, int32_t cmd);
 void translate_nop (jit* ma_jit);
+void translate_out (jit* ma_jit);
+void translate_in (jit* ma_jit);
+void translate_sqrt (jit* ma_jit);
 
 void fill_with_nops (jit* ma_jit)
 {
@@ -95,15 +98,15 @@ void translate_cmd (jit* ma_jit, int32_t cmd)
         case cmd_say:
             translate_nop(ma_jit);
             break;
-        #if 0
-        case cmd_sqrt:
-            translate_sqrt(cmd);
-            break;
-
         case cmd_out:
+            translate_out (ma_jit);
+            break;
         case cmd_in:
-            translate_ui(cmd); // ui = user interaction
-        #endif
+            translate_in(ma_jit);
+            break;
+        case cmd_sqrt:
+            translate_sqrt(ma_jit);
+            break;
 
         default: err("Unrecognized cmd", cmd_dec);
     }
@@ -304,3 +307,46 @@ int8_t* ptr_8bit (const void* addr)
 {
     return (int8_t*) addr;
 }
+
+void translate_function (jit* ma_jit, intptr_t function_ptr, int8_t has_arg, int8_t ret);
+const int8_t HAS_ARG = 1, NO_ARG = 0, HAS_RET = 1, NO_RET = 0;
+
+void translate_out (jit* ma_jit)
+    {
+    extern int32_t out (int32_t x);
+    translate_function(ma_jit, (intptr_t) out, HAS_ARG, HAS_RET);
+    }
+
+void translate_in (jit* ma_jit)
+    {
+    extern int32_t in (void);
+    translate_function(ma_jit, (intptr_t) in, NO_ARG, HAS_RET);
+    }
+
+void translate_sqrt (jit* ma_jit)
+    {
+    extern int32_t int32_sqrt (int32_t value);
+    translate_function(ma_jit, (intptr_t) int32_sqrt, HAS_ARG, HAS_RET);
+    }
+
+#if 1
+void translate_function (jit* ma_jit, intptr_t function_ptr, int8_t has_arg, int8_t ret)
+{
+    if (has_arg) write_opcode(ma_jit, ptr_8bit(&POP_RDI), ONE_BYTE);
+
+    int32_t shift = (intptr_t) function_ptr  - ((intptr_t) ma_jit->buf_ptr + FIVE_BYTE);
+    int8_t func_call[FIVE_BYTE] = {CALL};
+
+    *((int32_t*)(func_call + 1)) = shift;
+
+    // Stack align
+    write_opcode(ma_jit, ptr_8bit(&PUSH_EMPTY), FOUR_BYTE);
+
+    write_opcode(ma_jit, func_call, FIVE_BYTE);
+
+    write_opcode(ma_jit, ptr_8bit(&POP_EMPTY), FOUR_BYTE);
+
+    // Push input value in stack
+    if (ret) write_opcode(ma_jit, ptr_8bit(&PUSH_OP1), ONE_BYTE);
+}
+#endif

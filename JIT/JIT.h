@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/mman.h>
+#include <math.h>
 #include "../processor/processor.h"
 
 struct jit
@@ -53,7 +54,9 @@ extern const int8_t NOP,
                     POP_OP1,    // RAX
                     POP_OP2,    // RCX
                     PUSH_OP1,
-                    JUMP_REL;
+                    JUMP_REL,
+                    CALL,
+                    POP_RDI;
 
 extern const int16_t    MOVABS_RSI,
                         MOVABS_R11,
@@ -67,6 +70,7 @@ extern const int16_t    MOVABS_RSI,
                         JLE_REL;
 
 extern const int32_t    POP_EMPTY,
+                        PUSH_EMPTY,
                         PUSH_RAM,
                         POP_RAM,
                         PUSH_REL,
