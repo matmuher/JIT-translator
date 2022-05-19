@@ -36,10 +36,17 @@ void translate_src_bin (jit* ma_jit)
 {
     ram_init(ma_jit);
 
-    while ((ma_jit->src_ip) < (ma_jit->src_bin_size))
+    for (int8_t run_id = 0; run_id < 2; run_id++)
     {
-        ma_jit->cmd_equivalent[ma_jit->src_ip] = ma_jit->buf_ptr;
-        translate_cmd(ma_jit, ma_jit->src_bin[ma_jit->src_ip++]);
+        while ((ma_jit->src_ip) < (ma_jit->src_bin_size))
+        {
+            printf("%d: %p\n", ma_jit->src_ip, ma_jit->buf_ptr);
+            ma_jit->cmd_equivalent[ma_jit->src_ip] = ma_jit->buf_ptr;
+            translate_cmd(ma_jit, ma_jit->src_bin[ma_jit->src_ip++]);
+        }
+
+        ma_jit->buf_ptr = ma_jit->bin_buf;
+        ma_jit->src_ip = 0;
     }
 }
 
@@ -230,9 +237,11 @@ void translate_hlt(jit* ma_jit, int32_t cmd)
 
 void translate_jump(jit* ma_jit, int32_t cmd)
 {
-    int32_t arg = ma_jit->src_bin[ma_jit->src_ip];
-    int32_t shift = (intptr_t) ma_jit->cmd_equivalent[arg] - (intptr_t) ma_jit->buf_ptr - FIVE_BYTE;
-    int8_t jump_rel[FIVE_BYTE] = {JUMP_REL};
+    // Argument is shift in source bin file
+    int32_t arg = ma_jit->src_bin[ma_jit->src_ip] + 1;
+    int32_t shift = (intptr_t) ma_jit->cmd_equivalent[arg] - ((intptr_t) ma_jit->buf_ptr + FIVE_BYTE);
+
+    int8_t jump_rel[FIVE_BYTE] = {JUMP_REL, 0};
     *((int32_t*) (jump_rel + 1)) = shift;
 
     write_opcode(ma_jit, ptr_8bit(jump_rel), FIVE_BYTE);

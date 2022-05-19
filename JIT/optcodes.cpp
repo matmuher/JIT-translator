@@ -7,7 +7,7 @@ const int8_t    NOP         = 0x90,
                 POP_OP1     = 0x58, // RAX
                 POP_OP2     = 0x59, // RCX
                 PUSH_OP1    = 0x50,
-                JUMP_REL    = 0xEB;
+                JUMP_REL    = 0xE9;
 
 const int16_t   MOVABS_RSI  = 0xBE48,
                 MOVABS_R11  = 0xBB49,

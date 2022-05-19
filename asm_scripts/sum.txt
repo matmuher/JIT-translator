@@ -1,6 +1,12 @@
-push 8
 push 2
+push 8
+
+jump :1
+mlt
+:1
 saw
+
 pop 1
+
 hlt
 
