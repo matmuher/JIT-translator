@@ -35,6 +35,12 @@ void read_src_bin (jit* ma_jit, const char* src_bin_path)
     fclose(src_bin_file);
 }
 
+void fill_with_nops (jit* ma_jit)
+{
+    for (int32_t byte_id = 0; byte_id < ma_jit->bin_buf_size; byte_id++)
+        ma_jit->bin_buf[byte_id] = NOP;
+}
+
 void print_bytes (int8_t* array, int32_t array_size, int32_t row_len)
 {
     for (int32_t byte_id = 0; byte_id < array_size; byte_id++)
@@ -47,7 +53,7 @@ void print_bytes (int8_t* array, int32_t array_size, int32_t row_len)
 
 void print_jit (jit* ma_jit)
 {
-      printf (
+      printf    (
                 "bin_buf: %p\n"
                 "bin_buf_size: %d\n"
                 "buf_ptr: %p\n"
@@ -65,5 +71,6 @@ void print_jit (jit* ma_jit)
                 ma_jit->src_bin_size,
                 ma_jit->src_ip,
                 ma_jit->cmd_equivalent,
-                ma_jit->is_stack_aligned);
+                ma_jit->is_stack_aligned
+                );
 }

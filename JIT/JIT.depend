@@ -2,7 +2,7 @@
 1653044652 source:/home/matmuh/Desktop/compiled_language/JIT/optcodes.cpp
 	"JIT.h"
 
-1653044701 /home/matmuh/Desktop/compiled_language/JIT/JIT.h
+1653045027 /home/matmuh/Desktop/compiled_language/JIT/JIT.h
 	<stdint.h>
 	<stdio.h>
 	<stdlib.h>
@@ -10,13 +10,13 @@
 	<math.h>
 	"../processor/processor.h"
 
-1653043326 source:/home/matmuh/Desktop/compiled_language/JIT/JIT.cpp
+1653045965 source:/home/matmuh/Desktop/compiled_language/JIT/JIT.cpp
 	"JIT.h"
 
-1653043834 source:/home/matmuh/Desktop/compiled_language/JIT/main.cpp
+1653048337 source:/home/matmuh/Desktop/compiled_language/JIT/main.cpp
 	"JIT.h"
 
-1652885472 /home/matmuh/Desktop/compiled_language/processor/processor.h
+1653045172 /home/matmuh/Desktop/compiled_language/processor/processor.h
 	"../strings/string_funk.h"
 	"../stack/stack.h"
 	"../hamlet/d_hamlet_functions.h"
@@ -48,19 +48,19 @@
 
 1652812689 /home/matmuh/Desktop/compiled_language/processor/cmd.h
 
-1653043037 source:/home/matmuh/Desktop/compiled_language/JIT/JIT_service.cpp
+1653045224 source:/home/matmuh/Desktop/compiled_language/JIT/JIT_service.cpp
 	"JIT.h"
 
 1652878075 source:/home/matmuh/Desktop/compiled_language/JIT/JIT_dsl.cpp
 	"JIT.h"
 
-1653043434 source:/home/matmuh/Desktop/compiled_language/JIT/JIT_transaltion_units.cpp
+1653046813 source:/home/matmuh/Desktop/compiled_language/JIT/JIT_transaltion_units.cpp
 	"JIT_translation.h"
 
 1653044692 source:/home/matmuh/Desktop/compiled_language/JIT/ariphmetic_unit.cpp
 	"JIT_translation.h"
 
-1653040321 /home/matmuh/Desktop/compiled_language/JIT/JIT_translation.h
+1653048277 /home/matmuh/Desktop/compiled_language/JIT/JIT_translation.h
 	"JIT.h"
 
 1653037577 source:/home/matmuh/Desktop/compiled_language/JIT/jumps_unit.cpp
@@ -69,9 +69,27 @@
 1653037570 source:/home/matmuh/Desktop/compiled_language/JIT/memory_unit.cpp
 	"JIT_translation.h"
 
-1653043347 source:/home/matmuh/Desktop/compiled_language/JIT/function_unit.cpp
+1653045420 source:/home/matmuh/Desktop/compiled_language/JIT/function_unit.cpp
 	"JIT_translation.h"
 
 1653037905 source:/home/matmuh/Desktop/compiled_language/JIT/nop_hlt_unit.cpp
+	"JIT_translation.h"
+
+1653045427 source:/home/matmuh/Desktop/compiled_language/JIT/stdlib_wrappers.cpp
+	"JIT.h"
+
+1653044692 source:/home/matmuh/Desktop/compiled_language/JIT/unit_ariphmetic.cpp
+	"JIT_translation.h"
+
+1653048305 source:/home/matmuh/Desktop/compiled_language/JIT/unit_functions_process.cpp
+	"JIT_translation.h"
+
+1653045910 source:/home/matmuh/Desktop/compiled_language/JIT/unit_jumps.cpp
+	"JIT_translation.h"
+
+1653037570 source:/home/matmuh/Desktop/compiled_language/JIT/unit_memory_access.cpp
+	"JIT_translation.h"
+
+1653047651 source:/home/matmuh/Desktop/compiled_language/JIT/unit_nop_hlt.cpp
 	"JIT_translation.h"
 

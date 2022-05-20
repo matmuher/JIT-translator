@@ -17,14 +17,18 @@ void translate_cond_jump (jit* ma_jit, int32_t cmd);
 void translate_nop (jit* ma_jit);
 void translate_hlt (jit* ma_jit);
 
-enum func_translate_arg
+enum func_params
     {
     HAS_ARG = 1,
     NO_ARG,
     HAS_RET,
     NO_RET,
+    SAVE_REGS,
+    NO_SAVE_REGS,
     };
-void translate_function (jit* ma_jit, intptr_t function_ptr, func_translate_arg has_arg, func_translate_arg ret);
+void translate_function (jit* ma_jit, intptr_t func_ptr, func_params has_arg, func_params ret, func_params save_regs = SAVE_REGS);
+void translate_call (jit* ma_jit, int32_t cmd);
+void translate_ret (jit* ma_jit);
 void translate_out (jit* ma_jit);
 void translate_in (jit* ma_jit);
 void translate_sqrt (jit* ma_jit);

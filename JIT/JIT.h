@@ -29,6 +29,7 @@ jit* jit_init (int32_t bin_buf_size, const char* src_bin_path);
 void jit_destr (jit* ma_jit);
 void fill_with_nops (jit* ma_jit);
 void put_ret (jit* ma_jit, int8_t bin_buf_shift);
+extern void read_src_bin (jit* ma_jit, const char* src_bin_path);
 void translate_src_bin (jit* ma_jit);
 int64_t bin_execute (int8_t* array);
 

@@ -1,6 +1,8 @@
-in
-out
-pop ax
+call :meow
 hlt
 
-
+def meow:
+push 1
+out
+pop ax
+ret

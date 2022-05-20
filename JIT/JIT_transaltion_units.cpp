@@ -1,39 +1,7 @@
 #include "JIT_translation.h"
 
-void fill_with_nops (jit* ma_jit)
-{
-    for (int32_t byte_id = 0; byte_id < ma_jit->bin_buf_size; byte_id++)
-        ma_jit->bin_buf[byte_id] = NOP;
-}
-
-void change_stack (jit* ma_jit, const int8_t* OPCODE, int8_t opcode_size)
-{
-    ma_jit->is_stack_aligned = (ma_jit->is_stack_aligned + 1) & 1;
-    write_opcode(ma_jit, OPCODE, opcode_size);
-}
-
-void enter (jit* ma_jit)
-{
-    change_stack(ma_jit, ptr_8bit(&PUSH_RBP), ONE_BYTE);
-    write_opcode(ma_jit, ptr_8bit(&MOV_RBP_RSP), THREE_BYTE);
-}
-
-void ram_init (jit* ma_jit)
-{
-    int8_t movabs_opdcode[TEN_BYTES] = {};
-    int8_t* opcode_ptr = movabs_opdcode;
-
-    // Set register for absolute addressing in RAM
-    *((int16_t*) opcode_ptr) = MOVABS_RSI;
-    opcode_ptr += 2;
-    *((int64_t*) opcode_ptr) = (uintptr_t) ma_jit->ram_ptr;
-    write_opcode(ma_jit, ptr_8bit(movabs_opdcode), TEN_BYTES);
-
-    // Set register for relative addressing in RAM
-    opcode_ptr -= 2;
-    *((int16_t*) opcode_ptr) = MOVABS_R11;
-    write_opcode(ma_jit, ptr_8bit(movabs_opdcode), TEN_BYTES);
-}
+void ram_init (jit* ma_jit);
+void enter (jit* ma_jit);
 
 void translate_src_bin (jit* ma_jit)
 {
@@ -91,13 +59,15 @@ void translate_cmd (jit* ma_jit, int32_t cmd)
         case cmd_jne:
         case cmd_jae:
         case cmd_jbe:
-        case cmd_call:
-        case cmd_ret:
             translate_cond_jump(ma_jit, cmd);
             break;
 
-        case cmd_say:
-            translate_nop(ma_jit);
+        case cmd_call:
+            translate_call(ma_jit, cmd);
+            break;
+
+        case cmd_ret:
+            translate_ret(ma_jit);
             break;
 
         case cmd_out:
@@ -114,11 +84,41 @@ void translate_cmd (jit* ma_jit, int32_t cmd)
 
         case cmd_sayi:
         case cmd_sayn:
+        case cmd_say:
             translate_say(ma_jit, cmd);
             break;
 
         default: err("Unrecognized cmd", cmd_dec);
     }
+}
+
+void change_stack (jit* ma_jit, const int8_t* OPCODE, int8_t opcode_size)
+{
+    ma_jit->is_stack_aligned = (ma_jit->is_stack_aligned + 1) & 1;
+    write_opcode(ma_jit, OPCODE, opcode_size);
+}
+
+void enter (jit* ma_jit)
+{
+    change_stack(ma_jit, ptr_8bit(&PUSH_RBP), ONE_BYTE);
+    write_opcode(ma_jit, ptr_8bit(&MOV_RBP_RSP), THREE_BYTE);
+}
+
+void ram_init (jit* ma_jit)
+{
+    int8_t movabs_opdcode[TEN_BYTES] = {};
+    int8_t* opcode_ptr = movabs_opdcode;
+
+    // Set register for absolute addressing in RAM
+    *((int16_t*) opcode_ptr) = MOVABS_RSI;
+    opcode_ptr += 2;
+    *((int64_t*) opcode_ptr) = (uintptr_t) ma_jit->ram_ptr;
+    write_opcode(ma_jit, ptr_8bit(movabs_opdcode), TEN_BYTES);
+
+    // Set register for relative addressing in RAM
+    opcode_ptr -= 2;
+    *((int16_t*) opcode_ptr) = MOVABS_R11;
+    write_opcode(ma_jit, ptr_8bit(movabs_opdcode), TEN_BYTES);
 }
 
 void write_opcode(jit* ma_jit, const int8_t* opcode_ptr, int8_t opcode_size)
