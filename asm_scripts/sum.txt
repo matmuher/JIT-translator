@@ -1,6 +1,6 @@
-push 1
-sqrt
+in
 out
-pop 1
+pop ax
 hlt
+
 

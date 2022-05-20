@@ -71,6 +71,7 @@ sub
 saw
 
 out
+pop 0
 
 push ax
 push 2
@@ -87,7 +88,7 @@ add
 saw
 
 out
-
+pop 0
 hlt
 
 :1
@@ -100,6 +101,7 @@ push 0
 sub
 saw
 out
+pop 0
 hlt
 
 :2
@@ -130,6 +132,8 @@ mlt
 out
 push dx
 out
+pop 0
+pop 0
 hlt
 
 :4
@@ -138,12 +142,14 @@ push 0
 je :0
 push 0
 out
+pop 0
 push ax
 push bx
 push 0
 sub
 saw
 out
+pop 0
 hlt
 
 :0

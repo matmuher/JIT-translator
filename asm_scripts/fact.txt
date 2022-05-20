@@ -31,11 +31,12 @@ jae :1
 
 push ax
 out
-
+pop 1
 hlt
 
 :2
 
 push 1
 out
+pop 1
 hlt

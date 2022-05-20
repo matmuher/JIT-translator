@@ -1,8 +1,8 @@
 # depslib dependency file v1.0
-1652979074 source:/home/matmuh/Desktop/compiled_language/JIT/optcodes.cpp
+1653044652 source:/home/matmuh/Desktop/compiled_language/JIT/optcodes.cpp
 	"JIT.h"
 
-1652980267 /home/matmuh/Desktop/compiled_language/JIT/JIT.h
+1653044701 /home/matmuh/Desktop/compiled_language/JIT/JIT.h
 	<stdint.h>
 	<stdio.h>
 	<stdlib.h>
@@ -10,10 +10,10 @@
 	<math.h>
 	"../processor/processor.h"
 
-1652945713 source:/home/matmuh/Desktop/compiled_language/JIT/JIT.cpp
+1653043326 source:/home/matmuh/Desktop/compiled_language/JIT/JIT.cpp
 	"JIT.h"
 
-1652981511 source:/home/matmuh/Desktop/compiled_language/JIT/main.cpp
+1653043834 source:/home/matmuh/Desktop/compiled_language/JIT/main.cpp
 	"JIT.h"
 
 1652885472 /home/matmuh/Desktop/compiled_language/processor/processor.h
@@ -48,12 +48,30 @@
 
 1652812689 /home/matmuh/Desktop/compiled_language/processor/cmd.h
 
-1652892472 source:/home/matmuh/Desktop/compiled_language/JIT/JIT_service.cpp
+1653043037 source:/home/matmuh/Desktop/compiled_language/JIT/JIT_service.cpp
 	"JIT.h"
 
 1652878075 source:/home/matmuh/Desktop/compiled_language/JIT/JIT_dsl.cpp
 	"JIT.h"
 
-1652981239 source:/home/matmuh/Desktop/compiled_language/JIT/JIT_transaltion_units.cpp
+1653043434 source:/home/matmuh/Desktop/compiled_language/JIT/JIT_transaltion_units.cpp
+	"JIT_translation.h"
+
+1653044692 source:/home/matmuh/Desktop/compiled_language/JIT/ariphmetic_unit.cpp
+	"JIT_translation.h"
+
+1653040321 /home/matmuh/Desktop/compiled_language/JIT/JIT_translation.h
 	"JIT.h"
+
+1653037577 source:/home/matmuh/Desktop/compiled_language/JIT/jumps_unit.cpp
+	"JIT_translation.h"
+
+1653037570 source:/home/matmuh/Desktop/compiled_language/JIT/memory_unit.cpp
+	"JIT_translation.h"
+
+1653043347 source:/home/matmuh/Desktop/compiled_language/JIT/function_unit.cpp
+	"JIT_translation.h"
+
+1653037905 source:/home/matmuh/Desktop/compiled_language/JIT/nop_hlt_unit.cpp
+	"JIT_translation.h"
 

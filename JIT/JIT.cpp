@@ -31,6 +31,8 @@ jit* jit_init (int32_t bin_buf_size, const char* src_bin_path)
     if (!(ma_jit->cmd_equivalent = (int8_t**) calloc (ma_jit->src_bin_size, sizeof(int8_t*))))
         err("can't allocate memory for cmd_equivalent", "calloc");
 
+    ma_jit->is_stack_aligned = 0;   // Initially there is ret address in the stack
+                                    // And rsp % 16 = 8
 
     return ma_jit;
 }

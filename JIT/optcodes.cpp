@@ -9,9 +9,16 @@ const int8_t    NOP         = 0x90,
                 PUSH_OP1    = 0x50,
                 JUMP_REL    = 0xE9,
                 CALL        = 0xE8,
-                POP_RDI     = 0x5F;
+                POP_RDI     = 0x5F,
+                PUSH_RBP    = 0x55,
+                POP_RBP     = 0x5D,
 
-
+                PUSH_RAX    =0x50,
+                PUSH_RCX    =0x51,
+                PUSH_RSI    =0x56,
+                POP_RAX     =0x58,
+                POP_RCX     =0x59,
+                POP_RSI     =0x5E;
 
 const int16_t   MOVABS_RSI  = 0xBE48,
                 MOVABS_R11  = 0xBB49,
@@ -22,7 +29,18 @@ const int16_t   MOVABS_RSI  = 0xBE48,
                 JE_REL      = 0x840F,
                 JNE_REL     = 0x850F,
                 JGE_REL     = 0x8D0F,
-                JLE_REL     = 0x8E0F;
+                JLE_REL     = 0x8E0F,
+                EXIT_CODE   = 0x9249,   // xchg r10, rax
+                CQO         = 0x9948,
+
+                PUSH_R10    = 0x5241,
+                PUSH_R11    = 0x5341,
+                PUSH_R12    = 0x5441,
+                PUSH_R13    = 0x5541,
+                POP_R10     = 0x5A41,
+                POP_R11     = 0x5B41,
+                POP_R12     = 0x5C41,
+                POP_R13     = 0x5D41;
 
 const int32_t   POP_EMPTY   = 0x08C48348,   // Are used to stack align
                 PUSH_EMPTY   = 0x08EC8348,
@@ -35,5 +53,5 @@ const int32_t   POP_EMPTY   = 0x08C48348,   // Are used to stack align
                 IMUL_OP12   = 0x00E9F748,
                 IDIV_OP12   = 0x00F9F748,
                 ZERO_RDX    = 0x00D23148,
-                CMP_OP12    = 0x00C83948;
-
+                CMP_OP12    = 0x00C83948,
+                MOV_RBP_RSP = 0x00E58948;

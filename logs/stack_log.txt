@@ -1,5 +1,5 @@
 ------------------------------
-stack <int> [0x7ffe54c2a910]
+stack <int> [0x7fff2783a820]
  size: 0, capacity [(nil)]: 0, data [(nil)]:
 *Start push*
 [Erros-Bip-Bop]
@@ -8,10 +8,10 @@ stack <int> [0x7ffe54c2a910]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 1, capacity [0x562e1cb0cd10]: 2, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
 	{
-	data[0] = 9;
+	data[0] = 5;
 	data[1] = POISONED;
 	}
  // Capacity changed to 2 //
@@ -19,10 +19,10 @@ stack <int> [0x7ffe54c2a910]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 1, capacity [0x562e1cb0cd10]: 2, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
 	{
-	data[0] = 9;
+	data[0] = 5;
 	data[1] = POISONED;
 	}
 *Start push*
@@ -30,171 +30,1003 @@ stack <int> [0x7ffe54c2a910]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 2, capacity [0x562e1cb0cd10]: 2, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
 	{
-	data[0] = 9;
-	data[1] = 9;
+	data[0] = 5;
+	data[1] = 6;
 	}
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 2, capacity [0x562e1cb0cd10]: 2, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
 	{
-	data[0] = 9;
-	data[1] = 9;
-	}
-*Start pop*
-[Erros-Bip-Bop]
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 1, capacity [0x562e1cb0cd10]: 2, data [0x562e1cb0cd18]:
-	{
-	data[0] = 9;
-	data[1] = 9;
-	}
-[Erros-Bip-Bop]
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 1, capacity [0x562e1cb0cd10]: 2, data [0x562e1cb0cd18]:
-	{
-	data[0] = 9;
-	data[1] = 9;
-	}
-*Start pop*
-[Erros-Bip-Bop]
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 0, capacity [0x562e1cb0cd10]: 1, data [0x562e1cb0cd18]:
-	{
-	data[0] = 9;
-	}
- // Capacity changed to 1 //
-[Erros-Bip-Bop]
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 0, capacity [0x562e1cb0cd10]: 1, data [0x562e1cb0cd18]:
-	{
-	data[0] = 9;
+	data[0] = 5;
+	data[1] = 6;
 	}
 *Start push*
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 1, capacity [0x562e1cb0cd10]: 1, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
 	{
-	data[0] = 9;
+	data[0] = 5;
+	data[1] = 6;
+	data[2] = 0;
+	data[3] = POISONED;
+	}
+ // Capacity changed to 4 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 6;
+	data[2] = 0;
+	data[3] = POISONED;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 6;
+	data[2] = 0;
+	data[3] = POISONED;
 	}
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 1, capacity [0x562e1cb0cd10]: 1, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
 	{
-	data[0] = 9;
+	data[0] = 5;
+	data[1] = 6;
+	data[2] = 0;
+	data[3] = POISONED;
 	}
-*Start push*
+*Start pop*
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 2, capacity [0x562e1cb0cd10]: 2, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
 	{
-	data[0] = 9;
-	data[1] = 9;
+	data[0] = 5;
+	data[1] = 6;
 	}
  // Capacity changed to 2 //
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 2, capacity [0x562e1cb0cd10]: 2, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
 	{
-	data[0] = 9;
-	data[1] = 9;
+	data[0] = 5;
+	data[1] = 6;
 	}
 *Start pop*
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 1, capacity [0x562e1cb0cd10]: 2, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
 	{
-	data[0] = 9;
-	data[1] = 9;
-	}
-[Erros-Bip-Bop]
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 1, capacity [0x562e1cb0cd10]: 2, data [0x562e1cb0cd18]:
-	{
-	data[0] = 9;
-	data[1] = 9;
-	}
-*Start pop*
-[Erros-Bip-Bop]
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 0, capacity [0x562e1cb0cd10]: 1, data [0x562e1cb0cd18]:
-	{
-	data[0] = 9;
+	data[0] = 5;
 	}
  // Capacity changed to 1 //
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 0, capacity [0x562e1cb0cd10]: 1, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
 	{
-	data[0] = 9;
+	data[0] = 5;
 	}
 *Start push*
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 1, capacity [0x562e1cb0cd10]: 1, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
 	{
-	data[0] = 1;
+	data[0] = 5;
 	}
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 1, capacity [0x562e1cb0cd10]: 1, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
 	{
-	data[0] = 1;
+	data[0] = 5;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 5;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 5;
 	}
 *Start pop*
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 0, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 5;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 5;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+ // Capacity changed to 1 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 6;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 6;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 6;
+	data[2] = 6;
+	data[3] = POISONED;
+	}
+ // Capacity changed to 4 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 6;
+	data[2] = 6;
+	data[3] = POISONED;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 6;
+	data[2] = 6;
+	data[3] = POISONED;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 6;
+	data[2] = 6;
+	data[3] = POISONED;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 6;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 6;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = POISONED;
+	}
+ // Capacity changed to 4 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = POISONED;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 4, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 4, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = 0;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	data[2] = 0;
+	data[3] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	data[1] = 36;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	}
+ // Capacity changed to 1 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 25;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 61;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 61;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 61;
+	data[1] = 0;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 61;
+	data[1] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 61;
+	data[1] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 61;
+	data[1] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 61;
+	}
+ // Capacity changed to 1 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 61;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 0;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+ // Capacity changed to 1 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 6;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 6;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 6;
+	data[1] = 0;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 6;
+	data[1] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 6;
+	data[1] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 6;
+	data[1] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 6;
+	}
+ // Capacity changed to 1 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 6;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	data[1] = 0;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	data[1] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	data[1] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	data[1] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	}
+ // Capacity changed to 1 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 0;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+ // Capacity changed to 1 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 0, data [0x563a7242e3b8]:
 	{
 	}
  // Capacity changed to 0 //
@@ -202,184 +1034,298 @@ stack <int> [0x7ffe54c2a910]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 0, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
-	{
-	}
-*Start pop*
-[Erros-Bip-Bop]
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -1, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
-	{
-	}
- // Capacity changed to 0 //
-[Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -1, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 0, data [0x563a7242e3b8]:
 	{
 	}
 *Start push*
 [Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 0, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
 	{
+	data[0] = 0;
+	data[1] = POISONED;
 	}
-@@ Values array: LEFT ATTACK! (ptichku jalko) @@
+ // Capacity changed to 2 //
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: 0, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
 	{
+	data[0] = 0;
+	data[1] = POISONED;
 	}
 *Start pop*
-@@ Values array: LEFT ATTACK! (ptichku jalko) @@
 [Erros-Bip-Bop]
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -1, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	}
+ // Capacity changed to 1 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 0;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 6;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 6;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 6;
+	data[2] = 0;
+	data[3] = POISONED;
+	}
+ // Capacity changed to 4 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 3, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 6;
+	data[2] = 0;
+	data[3] = POISONED;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 6;
+	data[2] = 0;
+	data[3] = POISONED;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 4, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 6;
+	data[2] = 0;
+	data[3] = POISONED;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 6;
+	}
+ // Capacity changed to 2 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = 6;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = -6;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 2, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = -6;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = -6;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	data[1] = -6;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+ // Capacity changed to 1 //
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = 5;
+	}
+*Start push*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = -1;
+	}
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
+	{
+	data[0] = -1;
+	}
+*Start pop*
+[Erros-Bip-Bop]
+------------------------------
+
+------------------------------
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 0, data [0x563a7242e3b8]:
 	{
 	}
  // Capacity changed to 0 //
 [Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -1, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
-	{
-	}
-*Start pop*
-[Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -2, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
-	{
-	}
- // Capacity changed to 0 //
-[Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -2, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 0, data [0x563a7242e3b8]:
 	{
 	}
 *Start push*
 [Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -1, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
 	{
+	data[0] = -1;
+	data[1] = POISONED;
 	}
-@@ Values array: LEFT ATTACK! (ptichku jalko) @@
+ // Capacity changed to 2 //
 [Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -1, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 1, capacity [0x563a7242e3b0]: 2, data [0x563a7242e3b8]:
 	{
-	}
-*Start pop*
-@@ Values array: LEFT ATTACK! (ptichku jalko) @@
-[Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -2, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
-	{
-	}
- // Capacity changed to 0 //
-[Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -2, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
-	{
+	data[0] = -1;
+	data[1] = POISONED;
 	}
 *Start pop*
 [Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
 ------------------------------
 
 ------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -3, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
+stack <int> [0x7fff2783a820]
+ size: 0, capacity [0x563a7242e3b0]: 1, data [0x563a7242e3b8]:
 	{
+	data[0] = -1;
 	}
- // Capacity changed to 0 //
+ // Capacity changed to 1 //
 [Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -3, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
-	{
-	}
-*Start push*
-[Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -2, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
-	{
-	}
-[Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
-------------------------------
-
-------------------------------
-stack <int> [0x7ffe54c2a910]
- size: -2, capacity [0x562e1cb0cd10]: 0, data [0x562e1cb0cd18]:
-	{
-	}
-*Start pop*
-[Erros-Bip-Bop]
-[ERROR] INVALID STACK SIZE
-[ERROR] NOTHING TO POP
 ------------------------------
 

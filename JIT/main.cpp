@@ -1,13 +1,23 @@
 #include "JIT.h"
 
-int32_t out (int32_t x)
+void sayi (void)
+{
+    puts("Infinity roots");
+}
+
+void sayn (void)
+{
+    puts("No roots");
+}
+
+int64_t out (int64_t x)
 {
     printf("%d\n", x);
 
     return x;
 }
 
-int32_t in (void)
+int64_t in (void)
 {
     int user_input = 0;
     scanf("%d", &user_input);
@@ -15,17 +25,17 @@ int32_t in (void)
     return user_input;
 }
 
-int32_t int32_sqrt (int32_t value)
+int64_t int64_sqrt (int64_t value)
 {
-    return lround(sqrt((double) value));
+    return llround(sqrt((double) value));
 }
 
 int main ()
 {
     #if 1
-    const int32_t BIN_BUF_SIZE = 50;
+    const int32_t BIN_BUF_SIZE = 1000;
 
-    system("cd .. && ./ma_asm asm_scripts/sum.txt");
+    // system("cd .. && ./ma_asm asm_scripts/square_code.txt");
 
     jit* ma_jit = jit_init(BIN_BUF_SIZE, "../binary_my_binary");
 

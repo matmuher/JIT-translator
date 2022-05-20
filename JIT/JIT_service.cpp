@@ -45,3 +45,25 @@ void print_bytes (int8_t* array, int32_t array_size, int32_t row_len)
     }
 }
 
+void print_jit (jit* ma_jit)
+{
+      printf (
+                "bin_buf: %p\n"
+                "bin_buf_size: %d\n"
+                "buf_ptr: %p\n"
+                "ram_ptr: %p\n"
+                "src_bin: %p\n"
+                "src_bin_size: %d\n"
+                "src_ip: %d\n"
+                "cmd_equivalent: %p\n"
+                "is_stack_aligned: %d\n\n",
+                ma_jit->bin_buf,
+                ma_jit->bin_buf_size,
+                ma_jit->buf_ptr,
+                ma_jit->ram_ptr,
+                ma_jit->src_bin,
+                ma_jit->src_bin_size,
+                ma_jit->src_ip,
+                ma_jit->cmd_equivalent,
+                ma_jit->is_stack_aligned);
+}

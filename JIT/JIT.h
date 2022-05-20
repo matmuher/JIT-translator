@@ -21,6 +21,8 @@ struct jit
     int32_t src_ip;
 
     int8_t** cmd_equivalent;
+
+    uint8_t is_stack_aligned;
 };
 
 jit* jit_init (int32_t bin_buf_size, const char* src_bin_path);
@@ -56,7 +58,16 @@ extern const int8_t NOP,
                     PUSH_OP1,
                     JUMP_REL,
                     CALL,
-                    POP_RDI;
+                    POP_RDI,
+                    PUSH_RBP,
+                    POP_RBP,
+
+                    PUSH_RAX,
+                    PUSH_RCX,
+                    PUSH_RSI,
+                    POP_RAX,
+                    POP_RCX,
+                    POP_RSI;
 
 extern const int16_t    MOVABS_RSI,
                         MOVABS_R11,
@@ -67,7 +78,18 @@ extern const int16_t    MOVABS_RSI,
                         JE_REL,
                         JNE_REL,
                         JGE_REL,
-                        JLE_REL;
+                        JLE_REL,
+                        EXIT_CODE,
+                        CQO,
+
+                        PUSH_R10,
+                        PUSH_R11,
+                        PUSH_R12,
+                        PUSH_R13,
+                        POP_R10,
+                        POP_R11,
+                        POP_R12,
+                        POP_R13;
 
 extern const int32_t    POP_EMPTY,
                         PUSH_EMPTY,
@@ -80,6 +102,7 @@ extern const int32_t    POP_EMPTY,
                         IMUL_OP12,
                         IDIV_OP12,
                         ZERO_RDX,
-                        CMP_OP12;
+                        CMP_OP12,
+                        MOV_RBP_RSP;
 
 #endif // JIT_H_INCLUDED
