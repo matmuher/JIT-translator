@@ -105,3 +105,122 @@
 	"../dictionary/dict.h"
 	"../differ/differ.h"
 
+1652814107 source:/home/matmuh/Desktop/language/dictionary/dict.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	"dict.h"
+
+1652812688 /home/matmuh/Desktop/language/dictionary/dict.h
+	<stdio.h>
+
+1652812688 source:/home/matmuh/Desktop/language/differ/dot_dump.cpp
+	<stdio.h>
+	<stdlib.h>
+	"differ.h"
+
+1652813194 /home/matmuh/Desktop/language/differ/differ.h
+	<stdlib.h>
+	<stdio.h>
+	"../memory_free/elephant_calloc_extern.h"
+
+1652812688 /home/matmuh/Desktop/language/memory_free/elephant_calloc_extern.h
+
+1652812688 source:/home/matmuh/Desktop/language/differ/optimizer.cpp
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<ctype.h>
+	"differ.h"
+	"tree_funks.h"
+
+1652812688 /home/matmuh/Desktop/language/differ/tree_funks.h
+	"differ.h"
+
+1652812688 source:/home/matmuh/Desktop/language/differ/tree_funks.cpp
+	<string.h>
+	"differ.h"
+
+1652812688 source:/home/matmuh/Desktop/language/memory_free/elephant_calloc.cpp
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"elephant_calloc_extern.h"
+
+1653069708 source:/home/matmuh/Desktop/language/language/compile.cpp
+	"compile.h"
+
+1652813250 /home/matmuh/Desktop/language/language/compile.h
+	<stdio.h>
+	<string.h>
+	"great_grammar.h"
+	"lexo_parser.h"
+	"../hamlet/d_hamlet_functions.h"
+	"../dictionary/dict.h"
+	"to_asm.h"
+
+1652813328 /home/matmuh/Desktop/language/language/great_grammar.h
+	"../differ/differ.h"
+	"lexo_parser.h"
+
+1652812689 /home/matmuh/Desktop/language/language/lexo_parser.h
+
+1652813228 /home/matmuh/Desktop/language/hamlet/d_hamlet_functions.h
+	"../strings/string_funk.h"
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<assert.h>
+
+1652812689 /home/matmuh/Desktop/language/strings/string_funk.h
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+
+1652813276 /home/matmuh/Desktop/language/language/to_asm.h
+	<assert.h>
+	<string.h>
+	"../differ/tree_funks.h"
+	"../dictionary/dict.h"
+	"../differ/differ.h"
+
+1652813354 source:/home/matmuh/Desktop/language/language/get_strings.cpp
+	<string.h>
+	"../hamlet/d_hamlet_functions.h"
+	"../memory_free/elephant_calloc_extern.h"
+
+1653069901 source:/home/matmuh/Desktop/language/language/great_grammar.cpp
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<math.h>
+	<string.h>
+	"../differ/tree_funks.h"
+	"great_grammar.h"
+
+1652821386 source:/home/matmuh/Desktop/language/language/id_process.cpp
+	<stdio.h>
+	<ctype.h>
+	<math.h>
+	<string.h>
+	"great_grammar.h"
+
+1652821384 source:/home/matmuh/Desktop/language/language/lexo_parser.cpp
+	<stdio.h>
+	<string.h>
+	"great_grammar.h"
+	"lexo_parser.h"
+
+1653070173 source:/home/matmuh/Desktop/language/language/main.cpp
+	<stdio.h>
+	"compile.h"
+
+1652821380 source:/home/matmuh/Desktop/language/language/to_asm.cpp
+	"to_asm.h"
+
+1652821378 source:/home/matmuh/Desktop/language/language/tree_dsl.cpp
+	"../differ/differ.h"
+	"../differ/tree_funks.h"
+	"great_grammar.h"
+

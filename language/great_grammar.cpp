@@ -256,6 +256,7 @@ ma_ty get_E (parsed_line_reader* pl_reader)
     return val;
     }
 
+
 /*!
 @brief Parse multiply and division;
        Descend to power etc;
@@ -302,6 +303,7 @@ ma_ty get_S (parsed_line_reader* pl_reader)
 
     return val;
     }
+
 
 /*!
 @brief Parse function calls;
@@ -359,6 +361,7 @@ ma_ty get_F (parsed_line_reader* pl_reader)
         }
     }
 
+
 /*!
 @brief [P]rimary level: parse parenthesized expressions;
        Descend to values and variables parse;
@@ -389,7 +392,7 @@ ma_ty get_N (parsed_line_reader* pl_reader)
     {
     if (TOKEN_TYPE == T_VAL)
         {
-        double val = 0;
+        int val = 0;
 
         val = gfs(pl[TOKEN_ID++].content.val);
 

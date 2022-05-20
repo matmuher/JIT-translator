@@ -1,165 +1,165 @@
-# ma_jit (JIT binary translator)
+# MA_LANGUAGE
 
+## About
+In this project I developed a tiny programming language.
+To be exact I:
+### 1. Developed language's grammar (details will be added later, but you can try to get it by exploring [great_grammar](great_grammar.cpp)).
 
-## Shortly
-**ma_jit is JIT (just-in-time) binary translator**, that translates **byte-code of [ma_proc](https://github.com/matmuher/flip-flop/tree/main/processor)** (my virtual machine) **to x86** instruction set.
+![example of ma_language code](Pictures/exapmle_of_code.PNG)
 
-## Translation
+### 2. Created frontend for this language. I made RDP (recursive descent parser). As a result i got AST (abstract syntax tree)
 
-Original ma_proc instruction set consists of 27 instructions. You can check full list [here](processor/cmd.h). ma_jit processes major part of them. 
+![abstract syntx tree](Pictures/ast.PNG)
 
-To simplify translation original instructions were divided into logic units. Translation by units:
+### 3.Created backend that translates AST to assembler of [my virtual machine](https://github.com/matmuher/flip-flop/tree/main/processor)
+![example of generated assemble code](Pictures/asm.PNG)
 
-1. Arithmetic
-2. Memory access
-3. Jumps
-4. Functions
-5. hlt
+## Programs example:
 
-### 1. Arithmetic
+### Factorial:
 
-In ma_proc arithmetic is based on stack. Step by step any operation can be represented as:
+```
+define main ()
+{
+	n:10;
+	n:fact(n);
+	print(n);
+	return 0;
+}!
 
-- two operands are pushed
-- arithmetic operation is performed
-- result is pushed 
+define fact (n)
+{
+	SnowBall:1;
+	x:1;
+	while(x<n+1)
+	{
+	SnowBall:SnowBall*x;
+	x:x+1;
+	};
 
-Due to this algorithm translation looks like this:
+	return SnowBall;
+}!
+$
+```
 
-<table>
-	<tr>
-		<th> ma_proc </th>
-		<th> x86 </th>
-	</tr>
-	<tr>
-		<td> add </td>
-		<td>
-			<br>pop rax <br>
-			pop rcx <br>
-			add rax, rcx <br>
-			push rax <br> <br>
-		</td>
-	</tr>
-	<tr>
-		<td> sub </td>
-		<td>
-			<br>pop rax <br>
-			pop rcx <br>
-			sub rax, rcx <br> 
-			push rax <br> <br>
-		</td>
-	</tr>
-	<tr>
-		<td> mlt </td>
-		<td>
-			<br>pop rax <br>
-			pop rcx <br>
-			cqo *<br>
-			imul <br>
-			push rax <br> <br>
-		</td>
-	</tr>
-		<tr>
-		<td> saw </td>
-		<td>
-			<br>pop rax <br>
-			pop rcx <br>
-			cqo <br>
-			idiv <br> 
-			push rax <br> <br>
-		</td>
-	</tr>
-</table>
+### Fibbonachi
 
-	 * due to peculiarities of x86 we need to extend rax to rdx sign-respectively
+```
+define main ()
+{
+	n:10;
+	FibVal:Fib(n);
+	print(FibVal);
+	return 0;
+}!
 
-### 2. Memory access
+define Fib (n)
+{
+	if(n=1){return 1;};
+	if(n=2){return 1;};
 
-ma_proc have 4 registers: AX, BX, CX, DX. In translated binary they correspond to R10, R11, R12, R13 respectively. 
+	return Fib(n-1)+Fib(n-2);
+}!
+$
+```
 
-ma_proc uses stack to carry out operations. x86 has stack as well, so memory access operations looks quite similar.
+### Square equation solve
 
-In ma_proc there is RAM memory. In x86 RAM memory is located after section with code. It's location is put in RSI and R11 initially. In ma_proc we can apply directly to RAM, in translted code it would interpreted as RSI relative addressing.
-.
-In ma_proc set BX is used in register-relative RAM addressing. In translated R11 is responsible for it.
+```
+define main ()
+{
+	coef1:input();
+	coef2:input();
+	coef3:input();
+	
+	OneRoot:1;
+	TwoRoots:2;
+	NoRoots:3;
+	InfRoots:4;
 
-In ma_proc we can address to RAM straightly. In x86 version 
+	if(coef1=0){if(coef2=0){if(coef3=0){return InfRoots;};};};
 
-<table>
-	<tr>
-		<th> ma_proc </th>
-		<th> x86 </th>
-	</tr>
-	<tr>
-		<td> push 1  </td>
-		<td>
-			push imm
-		</td>
-	</tr>
-	<tr>
-		<td> push [bx+1] </td>
-		<td>
-			push [r11 + 1]
-		</td>
-	</tr>
-	<tr>
-		<td> push ax <br>
-			push bx<br>
-			push cx<br>
-			push dx<br>
-		 </td>
-		<td>push r10 <br>
-			push r11<br>
-			push r12<br>
-			push r13<br>
-		 </td>
-		</td>
-	</tr>
-		<tr>
-		<td> push [2] </td>
-		<td>
-			push [rsi+2]
-		</td>
-	</tr>
-</table>
+	if(coef1=0)
+	{	
+		STATUS:linear(coef2,coef3);
+		
+		return STATUS;
+	};
 
-### 3. Jumps
+	if(coef2=0)
+	{
+		CoefDiv:coef3/coef1*(0-1);
+		
+		if(CoefDiv>(0-1))
+		{
+			x1:sqrt(CoefDiv);
+			x2:(0-1)*x1;
+	
+			print(x1,x2);
+			return TwoRoots;
+		};
+		coef1:33;
+		return NoRoots;
+	};
 
-To make a jump destination address is needed. In ma_proc this address is absolute offset from the start of code. In translated version relative jump is used.
+	if(coef3=0)
+	{
+		x1:0;
+		print(x1);
+		STATUS:linear(coef1,coef2);
+		
+		if(STATUS=OneRoot)
+		{
+			return TwoRoots;
+		};
 
-Jump processing is implemented in two runs. In the first run array in which every ma_proc instruction corresponds to some address in JIT buffer (start of x86 equivalent instruction / instruction sequence)  is created.
+		return OneRoot;
+	};
 
-In the second run these address are used to compute relative jump argument.
+	
 
-Unconditional jumps are implemented with use of native x86 conditional jumps and cmp operation. Operands as with arithmetic are poped in RAX and RCX.
-### 4. Functions
+	STATUS:SolveViaD(coef1,coef2,coef3);
 
-ma_proc have 4 standard functions:
+	return STATUS;	
+}!
 
-- `in`
-- `out`
-- `sqrt`
-- `say`
+define linear (a,b)
+{
+	OneRoot:1;
+	NoRoots:3;
 
-In x86 translation of this functions is implemented as call of functions, that are wrappers over standard functions: 
+	
+	if(a=0)
+	{
+		return NoRoots;
+	};
+	
+	x:(0-1)*b/a;
+	print(x);
+	
+	return OneRoot;
+}!
 
-<stdio.h>: `in` - `scanf`, `ou`t and `say` - `printf`
+define SolveViaD (coef1,coef2,coef3)
+{
+	TwoRoots:2;
+	NoRoots:3;
 
-<math.h>: `sqrt` - `sqrt` 
+	D:coef2*coef2-4*coef1*coef3;
+	sqrtD:sqrt(D);
+	Coef1Mlt2:2*coef1;
+	
+	if(D>(0-1))
+	{
+		x1:((0-coef2)+sqrtD)/Coef1Mlt2;
+		x2:((0-coef2)-sqrtD)/Coef1Mlt2;
 
-According to System V ABI calling convention when calling a function stack should be 16-byte boundary aligned. There is push-pop counter in ma_jit that keeps track of whether stack is aligned. And if it is not PUSH_EMPTY (sub RSP, 8) and POP_EMPTY (add RSP, 8) are used.
+		print(x1,x2);
+	
+		return TwoRoots;
+	};
 
-### 5. hlt
-
-`hlt` is instruction of finishing work for ma_proc. In translation it stands for putting return value in RAX and returning to bin_execute() function using ret address from the stack.
-
-## Boost
-
-Let's compare performance of executing program on virtual machine and with JIT translation. We will measure time with Linux 	`time` utility.
-
-As a stress test I executed [fact.txt](asm_scripts/fact.tx). It computes factorial of 12 for 2,000,000 times.
-| ma_proc	|  ma_jit	|
-|-----|---|
-| (200 +- 5) * 10 ^ (-1)	|	(176 +- 3) * 10 ^ (-3) |
-
-All in all, 100 times boost!
+	return NoRoots;	
+}!
+$
+```

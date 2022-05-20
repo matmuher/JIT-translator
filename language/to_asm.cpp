@@ -1,5 +1,6 @@
 #include "to_asm.h"
 
+
 const size_t REVERS = 1,  NON_REVERS = 0,
              IN_EXPR = 1, OUT_EXPR = 0,
              IS_MAIN = 1, NON_MAIN = 0;
@@ -60,6 +61,67 @@ dict try_node (dict ma_dict, node* current_node)
     }
 
 
+void assembly_ufunk (node* call_node, FILE* asm_file, dict ma_dict, int in_expression)
+{
+    // Save base register
+    fprintf (asm_file, "push bx\n\n");
+
+    // Push parameters
+    size_t params_num = 0;
+    params_num = push_params (call_node->right_child, asm_file, ma_dict);
+
+    // Prepare bx for addressing in new scope
+    fprintf (asm_file, "push bx\n"
+                       "push %d\n"
+                       "add\n"
+                       "pop bx\n", ma_dict->value + 1);
+
+    // Pop parameters in RAM to called function has access to them
+    pop_params (params_num, asm_file);
+
+    fprintf (asm_file, "call :%s\n", call_node->left_child->content);
+
+    // Recover base register
+    fprintf (asm_file, "pop bx\n");
+
+    // push ret value if in expression
+    if (in_expression) fprintf (asm_file, "push ax\n");
+}
+
+void assembly_sfunk (node* call_node, FILE* asm_file, dict ma_dict, int in_expression)
+{
+    // Push parameters
+    size_t params_num = 0;
+    params_num = push_params (call_node->right_child, asm_file, ma_dict);
+
+    switch (call_node->left_child->content[0])
+        {
+        case 'p':   // print
+            {
+            for (size_t param_id = 0; param_id < params_num; param_id++)
+                {
+                fprintf (asm_file, "out\n"
+                                   "pop 0\n");
+                }
+            break;
+            }
+
+        case 's':   // sqrt
+            {
+            assert (params_num == 1);
+            fprintf (asm_file, "sqrt\n");
+            break;
+            }
+
+        case 'i':   // input
+            {
+            assert (params_num == 0);
+            fprintf (asm_file, "in\n");
+            break;
+            }
+        }
+}
+
 // Carry out assembly of function call
 // Provides so-called "RAM-frame" (it's kind of stack frame, but with ram)
 void call_assembly (node* call_node, FILE* asm_file, dict ma_dict, int in_expression)
@@ -68,62 +130,11 @@ void call_assembly (node* call_node, FILE* asm_file, dict ma_dict, int in_expres
 
     if (call_node->left_child->ntype == UFUNK)
         {
-        // Save base register
-        fprintf (asm_file, "push bx\n\n");
-
-        // Push parameters
-        size_t params_num = 0;
-        params_num = push_params (call_node->right_child, asm_file, ma_dict);
-
-        // Prepare bx for addressing in new scope
-        fprintf (asm_file, "push bx\n"
-                           "push %d\n"
-                           "add\n"
-                           "pop bx\n", ma_dict->value + 1);
-
-        // Pop parameters in RAM to called function has access to them
-        pop_params (params_num, asm_file);
-
-        fprintf (asm_file, "call :%s\n", call_node->left_child->content);
-
-        // Recover base register
-        fprintf (asm_file, "pop bx\n");
-
-        // push ret value if in expression
-        if (in_expression) fprintf (asm_file, "push ax\n");
+        assembly_ufunk(call_node, asm_file, ma_dict, in_expression);
         }
     else if (call_node->left_child->ntype == SFUNK)
         {
-        // Push parameters
-        size_t params_num = 0;
-        params_num = push_params (call_node->right_child, asm_file, ma_dict);
-
-        switch (call_node->left_child->content[0])
-            {
-            case 'p':
-                {
-                for (size_t param_id = 0; param_id < params_num; param_id++)
-                    {
-                    fprintf (asm_file, "out\n"
-                                       "pop 0\n");
-                    }
-                break;
-                }
-
-            case 's':
-                {
-                assert (params_num == 1);
-                fprintf (asm_file, "sqrt\n");
-                break;
-                }
-
-            case 'i':
-                {
-                assert (params_num == 0);
-                fprintf (asm_file, "in\n");
-                break;
-                }
-            }
+        assembly_sfunk(call_node, asm_file, ma_dict, in_expression);
         }
     else printf ("[ERROR]: Can't process a function [%s]\n", call_node->left_child->content);
     }
@@ -285,6 +296,7 @@ void sframe_assembly (node* sframe_node, FILE* asm_file, dict ma_dict, int is_ma
         // while
         case 'w': while_assembly (sframe_node, asm_file, ma_dict, cond_id++, is_main);break;
         // if
+        case 'a':
         case 'i': if_assembly (sframe_node, asm_file, ma_dict, is_main);break;
         }
     }
