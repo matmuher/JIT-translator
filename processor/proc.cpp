@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "processor.h"
-
+#include <time.h>
 
 int main ()
     {
@@ -41,9 +41,12 @@ int main ()
     proc_ctor (&prc, bin_size, cooking_list, log, prc_log);
 
 
+    // clock_t execution_clock = clock();
     // CODE EXECUTE
     doer (&prc);
-
+    // execution_clock = execution_clock - clock();
+    // float execution_time = (float) execution_clock / CLOCKS_PER_SEC;
+    // printf ("execution time: %.3f\n", execution_time);
 
     // LOGS AND BINARY CLOSE
     fclose (bin);

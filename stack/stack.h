@@ -6,6 +6,8 @@
 #define CANARY_DEFENCE
 #define HASH_DEFENCE
 
+#undef HASH_DEFENCE
+#undef CANARY_DEFENCE
 #define NDEBUG
 
 /*!

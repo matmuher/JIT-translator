@@ -28,7 +28,7 @@ void proc_ctor (proc* prc, size_t bin_size, int* cooking_list, FILE* log, FILE* 
         prc->ram[ram_id] = '+';
         }
 
-    puts ("START MASHINA!\n");
+    // puts ("START MASHINA!\n");
     }
 
 
@@ -36,7 +36,7 @@ void doer (proc* prc)
     {
     while (prc->ip < prc->bin_size)
         {
-        proc_dmp (prc);
+        // proc_dmp (prc);
 
         cmd_enum cmd = (cmd_enum) prc->recipe[prc->ip++];
 
@@ -164,7 +164,7 @@ void in (proc* prc)
 
 void hlt (proc* prc)
     {
-    printf ("Program finished with return code %d\n", prc->reg[0]);
+    // printf ("Program finished with return code %d\n", prc->reg[0]);
 
     stop_inst_console_close ();
 

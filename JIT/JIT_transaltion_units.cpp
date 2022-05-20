@@ -37,7 +37,7 @@ void translate_cmd (jit* ma_jit, int32_t cmd)
         case cmd_sub:
         case cmd_mlt:
         case cmd_saw:
-            translate_ariphmetic(ma_jit, cmd);
+            translate_arithmetic(ma_jit, cmd);
             break;
 
         case cmd_push:

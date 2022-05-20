@@ -34,13 +34,13 @@
 	<assert.h>
 	<stdbool.h>
 
-1652816095 source:/home/matmuh/Desktop/compiled_language/stack/stack.cpp
+1653065303 source:/home/matmuh/Desktop/compiled_language/stack/stack.cpp
 	"stack.h"
 	<stdlib.h>
 	<assert.h>
 	"../strings/string_funk.h"
 
-1651929925 /home/matmuh/Desktop/compiled_language/stack/stack.h
+1653065351 /home/matmuh/Desktop/compiled_language/stack/stack.h
 	<stdio.h>
 
 1652812689 source:/home/matmuh/Desktop/compiled_language/strings/string_functions.cpp
@@ -48,7 +48,7 @@
 
 1652812688 source:/home/matmuh/Desktop/compiled_language/processor/DSL.cpp
 
-1652812689 source:/home/matmuh/Desktop/compiled_language/processor/proc_funks.cpp
+1653065950 source:/home/matmuh/Desktop/compiled_language/processor/proc_funks.cpp
 	<stdio.h>
 	"processor.h"
 	<math.h>
@@ -56,7 +56,7 @@
 	"DSL.cpp"
 	"cmd.h"
 
-1652885472 /home/matmuh/Desktop/compiled_language/processor/processor.h
+1653045172 /home/matmuh/Desktop/compiled_language/processor/processor.h
 	"../strings/string_funk.h"
 	"../stack/stack.h"
 	"../hamlet/d_hamlet_functions.h"
@@ -67,7 +67,8 @@
 
 1652812688 /home/matmuh/Desktop/compiled_language/processor/DSL.cpp
 
-1652821905 source:/home/matmuh/Desktop/compiled_language/processor/proc.cpp
+1653065877 source:/home/matmuh/Desktop/compiled_language/processor/proc.cpp
 	<stdio.h>
 	"processor.h"
+	<time.h>
 

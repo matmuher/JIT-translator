@@ -5,7 +5,7 @@
 
 void translate_cmd (jit* ma_jit, int32_t cmd);
 
-void translate_ariphmetic(jit* ma_jit, int32_t cmd);
+void translate_arithmetic(jit* ma_jit, int32_t cmd);
 
 void translate_memory_access(jit* ma_jit, int32_t cmd);
 void push_registers (jit* ma_jit);

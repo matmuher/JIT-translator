@@ -37,14 +37,14 @@
 1652812689 source:/home/matmuh/Desktop/compiled_language/strings/string_functions.cpp
 	"string_funk.h"
 
-1652815765 source:/home/matmuh/Desktop/compiled_language/processor/asma.cpp
+1652821726 source:/home/matmuh/Desktop/compiled_language/processor/asma.cpp
 	<stdio.h>
 	"processor.h"
 	"../strings/string_funk.h"
 	"../hamlet/d_hamlet_functions.h"
 	"../square_solver/beer_equation.h"
 
-1652815799 /home/matmuh/Desktop/compiled_language/processor/processor.h
+1653045172 /home/matmuh/Desktop/compiled_language/processor/processor.h
 	"../strings/string_funk.h"
 	"../stack/stack.h"
 	"../hamlet/d_hamlet_functions.h"

@@ -12,7 +12,7 @@ void exit_code (jit* ma_jit)
 
 void translate_hlt(jit* ma_jit)
 {
-    puts("Hlt is hear\n");
+    // puts("Hlt is hear\n");
     exit_code(ma_jit);
 
     change_stack(ma_jit, ptr_8bit(&POP_RBP), ONE_BYTE);

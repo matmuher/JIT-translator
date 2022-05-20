@@ -1,12 +1,15 @@
+
+push 2000000
+pop dx
+
+:5
 push 1
 pop ax // факториальный снежный ком
 
 push 1
 pop bx // счётчик
 
-say
-
-in
+push 12
 pop cx // ограничитель
 
 push cx
@@ -29,14 +32,20 @@ push bx
 push cx
 jae :1
 
+push 1
+push dx
+sub
+pop dx
+
+push dx
+push 0
+jne :5
+
 push ax
 out
 pop 1
+
 hlt
 
 :2
-
-push 1
-out
-pop 1
 hlt

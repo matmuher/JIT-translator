@@ -273,10 +273,10 @@ int find_stock (int cur_size)
 
 void stack_push (stack* stk, int value)
     {
-    assert (!IsBadReadPtr (stk->stk_debug.log, TRY_LOG));
+    // assert (!IsBadReadPtr (stk->stk_debug.log, TRY_LOG));
 
     stk->stk_event.push = HAPPENED;
-    stack_verify (stk);
+    //stack_verify (stk);
 
     stk->grosse++;
 
@@ -292,7 +292,7 @@ void stack_push (stack* stk, int value)
     // Push value
     stk->data[stk->grosse - 1] = value;
 
-    stack_verify (stk);
+    // stack_verify (stk);
     }
 
 int stack_pop (stack* stk)
@@ -301,7 +301,7 @@ int stack_pop (stack* stk)
 
     stk->stk_event.pop = HAPPENED;
 
-    stack_verify (stk);
+    // stack_verify (stk);
 
     int pop_elem = stk->data[--stk->grosse];
 
@@ -313,7 +313,7 @@ int stack_pop (stack* stk)
         update_capacity (stk);
         }
 
-    stack_verify (stk);
+    // stack_verify (stk);
 
     return pop_elem;
     }
@@ -324,7 +324,7 @@ void stack_dtor (stack* stk)
     assert (!IsBadReadPtr (stk->stk_debug.log, TRY_LOG));
 
     stk->stk_event.dctor = HAPPENED;
-    stack_verify (stk);
+    // stack_verify (stk);
 
     // Poison stack
     clear_tales (stk, 0);

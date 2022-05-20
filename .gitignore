@@ -1,0 +1,5 @@
+*.depend
+*.layout
+*.html
+*.xml
+*.o

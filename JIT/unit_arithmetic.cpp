@@ -1,6 +1,6 @@
 #include "JIT_translation.h"
 
-void translate_ariphmetic(jit* ma_jit, int32_t cmd)
+void translate_arithmetic(jit* ma_jit, int32_t cmd)
 {
     change_stack(ma_jit, ptr_8bit(&POP_OP1), ONE_BYTE);
     change_stack(ma_jit, ptr_8bit(&POP_OP2), ONE_BYTE);
