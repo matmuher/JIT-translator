@@ -1,65 +1,166 @@
-# MA_LANGUAGE
+# ma_jit (JIT binary translator)
 
-## About
-In this project I developed a tiny programming language.
-To be exact I:
-### 1. Developed language's grammar (details will be added later, but you can try to get it by exploring [great_grammar](great_grammar.cpp)).
 
-![example of ma_language code](Pictures/exapmle_of_code.PNG)
+## Shortly
+**ma_jit is JIT (just-in-time) binary translator**, that translates **byte-code of [ma_proc](https://github.com/matmuher/flip-flop/tree/main/processor)** (my virtual machine) **to x86** instruction set.
 
-### 2. Created frontend for this language. I made RDP (recursive descent parser). As a result i got AST (abstract syntax tree)
+## Translation
 
-![abstract syntx tree](Pictures/ast.PNG)
+Original ma_proc instruction set consists of 27 instructions. You can check full list [here](processor/cmd.h). ma_jit processes major part of them. 
 
-### 3.Created backend that translates AST to assembler of [my virtual machine](https://github.com/matmuher/flip-flop/tree/main/processor)
-![example of generated assemble code](Pictures/asm.PNG)
+To simplify translation original instructions were divided into logic units. Translation by units:
 
-## Programs example:
+1. Arithmetic
+2. Memory access
+3. Jumps
+4. Functions
+5. hlt
 
-Factorial:
+### 1. Arithmetic
 
-```
-define main ()
-{
-	n:10;
-	n:fact(n);
-	print(n);
-	return 0;
-}!
+In ma_proc arithmetic is based on stack. Step by step any operation can be represented as:
 
-define fact (n)
-{
-	SnowBall:1;
-	x:1;
-	while(x<n+1)
-	{
-	SnowBall:SnowBall*x;
-	x:x+1;
-	};
+- two operands are pushed
+- arithmetic operation is performed
+- result is pushed 
 
-	return SnowBall;
-}!
-$
-```
+Due to this algorithm translation looks like this:
 
-Fibbonachi
+<table>
+	<tr>
+		<th> ma_proc </th>
+		<th> x86 </th>
+	</tr>
+	<tr>
+		<td> add </td>
+		<td>
+			<br>pop rax <br>
+			pop rcx <br>
+			add rax, rcx <br>
+			push rax <br> <br>
+		</td>
+	</tr>
+	<tr>
+		<td> sub </td>
+		<td>
+			<br>pop rax <br>
+			pop rcx <br>
+			sub rax, rcx <br> 
+			push rax <br> <br>
+		</td>
+	</tr>
+	<tr>
+		<td> mlt </td>
+		<td>
+			<br>pop rax <br>
+			pop rcx <br>
+			cqo *<br>
+			imul <br>
+			push rax <br> <br>
+		</td>
+	</tr>
+		<tr>
+		<td> saw </td>
+		<td>
+			<br>pop rax <br>
+			pop rcx <br>
+			cqo <br>
+			idiv <br> 
+			push rax <br> <br>
+		</td>
+	</tr>
+</table>
 
-```
-define main ()
-{
-	n:10;
-	FibVal:Fib(n);
-	print(FibVal);
-	return 0;
-}!
+	 * due to peculiarities of x86 we need to extend rax to rdx sign-respectively
 
-define Fib (n)
-{
-	if(n=1){return 1;};
-	if(n=2){return 1;};
+### 2. Memory access
 
-	return Fib(n-1)+Fib(n-2);
-}!
-$
-```
+ma_proc have 4 registers: AX, BX, CX, DX. In translated binary they correspond to R10, R11, R12, R13 respectively. 
 
+ma_proc uses stack to carry out operations. x86 has stack as well, so memory access operations looks quite similar.
+
+In ma_proc there is RAM memory. In x86 RAM memory is located after section with code. It's location is put in RSI and R11 initially. In ma_proc we can apply directly to RAM, in translted code it would interpreted as RSI relative addressing.
+.
+In ma_proc set BX is used in register-relative RAM addressing. In translated R11 is responsible for it.
+
+In ma_proc we can address to RAM straightly. In x86 version 
+
+<table>
+	<tr>
+		<th> ma_proc </th>
+		<th> x86 </th>
+	</tr>
+	<tr>
+		<td> push 1  </td>
+		<td>
+			push imm
+		</td>
+	</tr>
+	<tr>
+		<td> push [bx+1] </td>
+		<td>
+			push [r11 + 1]
+		</td>
+	</tr>
+	<tr>
+		<td> push ax <br>
+			push bx<br>
+			push cx<br>
+			push dx<br>
+		 </td>
+		<td>push r10 <br>
+			push r11<br>
+			push r12<br>
+			push r13<br>
+		 </td>
+		</td>
+	</tr>
+		<tr>
+		<td> push [2] </td>
+		<td>
+			push [rsi+2]
+		</td>
+	</tr>
+</table>
+
+### 3. Jumps
+
+To make a jump destination address is needed. In ma_proc this address is absolute offset from the start of code. In translated version relative jump is used.
+
+Jump processing is implemented in two runs. In the first run array in which every ma_proc instruction corresponds to some address in JIT buffer (start of x86 equivalent instruction / instruction sequence)  is created.
+
+In the second run these address are used to compute relative jump argument.
+
+Unconditional jumps are implemented with use of native x86 conditional jumps and cmp operation. Operands as with arithmetic are poped in RAX and RCX.
+### 4. Functions
+
+ma_proc have 4 standard functions:
+
+- `in`
+- `out`
+- `sqrt`
+- `say`
+
+In x86 translation of this functions is implemented as call of functions, that are wrappers over standard functions: 
+
+<stdio.h>: `in` - `scanf`, `ou`t and `say` - `printf`
+
+<math.h>: `sqrt` - `sqrt` 
+
+According to System V ABI calling convention when calling a function stack should be 16-byte boundary aligned. There is push-pop counter in ma_jit that keeps track of whether stack is aligned. And if it is not PUSH_EMPTY (sub RSP, 8) and POP_EMPTY (add RSP, 8) are used.
+
+### 5. hlt
+
+`hlt` is instruction of finishing work for ma_proc. In translation it stands for putting return value in RAX and returning to bin_execute() function using ret address from the stack.
+
+## Boost
+
+Let's compare performance of executing program on virtual machine and with JIT translation. We will measure time with Linux 	`time` utility.
+
+As a stress test I executed [fact.txt](asm_scripts/fact.tx). It computes factorial of 12 for 2,000,000 times. ma_jit's time includes warm_up time.
+
+| ma_proc	|  ma_jit	|
+|-----|---|
+| (200 +- 5) * 10 ^ (-1)	|	(176 +- 3) * 10 ^ (-3) |
+
+All in all, 100 times boost!

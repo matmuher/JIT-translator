@@ -2,7 +2,7 @@
 #include "../hamlet/d_hamlet_functions.h"
 #include "../memory_free/elephant_calloc_extern.h"
 
-
+// define foo (firstparam,secondparam,thirdparam){var:firstparam;x:secondparam+thirdparam;return 2*var;}
 int get_size (FILE* file_pointer)
     {
     assert (file_pointer != NULL);
@@ -113,7 +113,7 @@ void write_line_buf_to_file (const char* file_name, int lines_num, const line_bu
     }
 
 
-void put_HH (char* const buffer, size_t file_size)
+void put_zeros (char* const buffer, size_t file_size)
     {
     assert (buffer != NULL);
     assert (file_size > 0);
@@ -122,6 +122,24 @@ void put_HH (char* const buffer, size_t file_size)
     while (cur_pos < buffer + file_size)
         {
         if (*cur_pos == '!')
+            {
+            *cur_pos = '#';
+            }
+        cur_pos++;
+        }
+
+    *(buffer + file_size) = '\0';
+    }
+
+void put_HH (char* const buffer, size_t file_size)
+    {
+    assert (buffer != NULL);
+    assert (file_size > 0);
+
+    char* cur_pos = buffer;
+    while (cur_pos < buffer + file_size)
+        {
+        if (*cur_pos == '\0')
             {
             *cur_pos = '#';
             }
@@ -166,7 +184,7 @@ line_buf* get_strings (char* file_name, size_t* lines_num, int smart_mode)
 
     char* buffer = read_to_buffer (file_name, &file_size);
 
-    put_HH (buffer, file_size);
+    put_zeros (buffer, file_size);
 
     *lines_num = count_correct_lines (buffer, file_size);
 
